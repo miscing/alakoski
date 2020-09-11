@@ -1,0 +1,12 @@
+[
+	{
+		"name": "Instagram",
+		"link":"https://www.google.fi",
+		"img": "assets/img/WhatsApp_Logo.png"
+	},
+	{ 
+		"name": "WhatsApp",
+		"link":"https://wa.me/+358440807771",
+		"img": "assets/img/WhatsApp_Logo.png"
+	}
+]

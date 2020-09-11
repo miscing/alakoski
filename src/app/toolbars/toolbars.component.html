@@ -1,0 +1,38 @@
+<div mat-app-background class="max" [ngClass]="{'dark-theme' : darkTheme, 'handheld' : isHandset$ }">
+	<mat-toolbar color="primary" class="toolbar">
+			<button
+				*ngIf="(isHandset$ | async)"
+				type="button"
+				mat-icon-button
+				aria-label="button toggle sidenav"
+				(click)="drawer.toggle()">
+				<mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+			</button>
+			<a mat-button routerLink="/"><h1 class="brand">{{ companyName }}</h1></a>
+			<span class="spacer"></span>
+			<div *ngIf="!(isHandset$ | async)">
+				<a mat-button *ngFor="let item of items" href="{{ item.link }}">
+					<img alt="{{ item.name }}" src="{{ item.img }}">
+				</a>
+			</div>
+	</mat-toolbar>
+	<mat-sidenav-container
+			class="spacer">
+		<mat-sidenav #drawer
+			class="left-menu"
+			[attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+			mode="over"
+			(opened)="false">
+			<mat-menu class="leftmenu">
+				<h2 mat-menu-item >Menu</h2>
+				<!-- <span class="spacer"></span> -->
+				<a mat-menu-item class="" *ngFor="let item of items" href="{{ item.link }}">
+					<img class="" alt="{{ item.name }}" src="{{ item.img }}">
+				</a>
+			</mat-menu>
+		</mat-sidenav>
+		<mat-sidenav-content>
+			<router-outlet></router-outlet>
+		</mat-sidenav-content>
+	</mat-sidenav-container>
+</div>
