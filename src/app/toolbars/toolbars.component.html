@@ -23,13 +23,9 @@
 			[attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
 			mode="over"
 			(opened)="false">
-			<mat-menu class="leftmenu">
-				<h2 mat-menu-item >Menu</h2>
-				<!-- <span class="spacer"></span> -->
-				<a mat-menu-item class="" *ngFor="let item of items" href="{{ item.link }}">
-					<img class="" alt="{{ item.name }}" src="{{ item.img }}">
-				</a>
-			</mat-menu>
+			<a mat-button *ngFor="let item of items" href="{{ item.link }}">
+				<img class="" alt="{{ item.name }}" src="{{ item.img }}">
+			</a>
 		</mat-sidenav>
 		<mat-sidenav-content>
 			<router-outlet></router-outlet>
