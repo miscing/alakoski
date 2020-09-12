@@ -16,6 +16,9 @@
 			padding: 1vh 5vw;
 		}
 	}
+	.brand {
+		font-size: xx-large;
+	}
 }
 
 // required to fill sidenav content to max size
@@ -28,18 +31,38 @@
 	flex: 1 1 auto;
 }
 .toolbar {
-	height: 8vh;
-	// align-items: center;
+	height: 10vh;
 }
 .brand {
 	font-family: "Stardos Stencil";
-	// vertical-align: middle;
 }
 .handheld{
 	.left-menu {
-		flex-direction: column;
-		// align-items: center;
 		height: 100%;
 		width: 60vw;
+	}
+	.max-width {
+		width: 100%;
+	}
+	.link-menu {
+		display: flex;
+		height: 100%;
+		width: 100%;
+		flex-flow: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.item-menu {
+		max-height: 6vh;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.item-text {
+		height: 100%;
+	}
+	.item {
+		// set again to make img maintain corrent aspect ratio
+		height: 6vh;
 	}
 }

@@ -14,8 +14,7 @@ import { Item } from './item';
 })
 export class ToolbarsComponent implements OnInit {
 
-	companyName: string = "Alakoski Oy";
-	brandImagePath: string = "";
+	companyName: string = "Saneeraus Alakoski Oy";
 	isHandset$ : Observable<boolean>;
 	darkTheme : boolean;
 	items : Item[] = itemsJson;

@@ -1,4 +1,4 @@
-<div mat-app-background class="max" [ngClass]="{'dark-theme' : darkTheme, 'handheld' : isHandset$ }">
+<div mat-app-background class="max" [ngClass]="{'dark-theme' : darkTheme, 'handheld' : isHandset$, 'light-theme' : ! darkTheme }">
 	<mat-toolbar color="primary" class="toolbar">
 			<button
 				*ngIf="(isHandset$ | async)"
@@ -23,9 +23,14 @@
 			[attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
 			mode="over"
 			(opened)="false">
-			<a mat-button *ngFor="let item of items" href="{{ item.link }}">
-				<img class="" alt="{{ item.name }}" src="{{ item.img }}">
-			</a>
+			<div class="link-menu">
+				<a mat-button class="max-width" *ngFor="let item of items" href="{{ item.link }}">
+					<div class="item-menu">
+						<h2 class="item-text">{{ item.name }}</h2>
+						<img class="item" alt="{{ item.name }}" src="{{ item.img }}">
+					</div>
+				</a>
+			</div>
 		</mat-sidenav>
 		<mat-sidenav-content>
 			<router-outlet></router-outlet>
