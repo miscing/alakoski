@@ -1,4 +1,4 @@
-<div class="container">
+<div class="max col-container">
 	<app-top-toolbar 
 		[isHandHeld]="(isHandHeld |async)"
 		[menuDrawer]="menudrawer">
@@ -7,8 +7,11 @@
 		<mat-sidenav #menudrawer
 		[opened]="!(isHandHeld | async) ? true :false"
 		[mode]="(isHandHeld | async) ? 'over' : 'side'">
-			<!-- TODO: maybe use mat-nav-list? -->
-			<h2>{{ capitalize("menu") }} </h2>
+			<div class="col-container">
+				<h2>{{ capitalize("menu") }} </h2>
+				<span class="spacer"></span>
+				<app-links></app-links>
+			</div>
 		</mat-sidenav>
 		<mat-sidenav-content>
 			<router-outlet></router-outlet>
