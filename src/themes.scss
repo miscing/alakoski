@@ -18,7 +18,7 @@
 
 @mixin set-theme-menu($theme) {
 	$menu-accent: map-get($theme, primary);
-	.menu {
+	.mat-drawer-inner-container { // Maybe not the smartest catch class
 		background-color: mat-color($menu-accent, lighter);
 	}
 }
@@ -47,6 +47,20 @@ $brand-color: mat-palette($mat-orange, A700, 500, 900);
 	@include set-theme($light-app-theme);
 }
 
+.dark-theme {
+	$dark-app-primary: mat-palette($mat-grey, 900, 800);
+	$dark-app-accent: $brand-color;
+	$dark-app-warn:    mat-palette($mat-red);
+	$dark-app-theme: mat-dark-theme((
+	color: (
+	primary: $dark-app-primary,
+	accent: $dark-app-accent,
+	warn: $dark-app-warn,
+	)
+	));
+	@include set-theme($dark-app-theme);
+}
+
 // .light-theme {
 // 	$light-app-primary: $brand-color;
 // 	$light-app-accent:	mat-palette($mat-grey, 900, 200);
@@ -60,18 +74,3 @@ $brand-color: mat-palette($mat-orange, A700, 500, 900);
 // 	));
 // 	@include set-theme($light-app-theme);
 // }
-
-.dark-theme {
-	$dark-app-primary: mat-palette($mat-grey, 900);
-	$dark-app-accent: $brand-color;
-	$dark-app-warn:    mat-palette($mat-red);
-	$dark-app-theme: mat-dark-theme((
-	color: (
-	primary: $dark-app-primary,
-	accent: $dark-app-accent,
-	warn: $dark-app-warn,
-	)
-	));
-	@include set-theme($dark-app-theme);
-}
-
