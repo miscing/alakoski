@@ -2,9 +2,6 @@ import { Input, Component, OnInit } from '@angular/core';
 
 import { MatDrawer } from '@angular/material/sidenav';
 
-import itemsJson from './items.json';
-import { Item } from './item';
-
 @Component({
   selector: 'app-top-toolbar',
   templateUrl: './top-toolbar.component.html',
@@ -15,7 +12,6 @@ export class TopToolbarComponent implements OnInit {
 	@Input() menuDrawer :MatDrawer;
 
 	companyName: string = "saneeraus alakoski oy";
-	items : Item[] = itemsJson;
 
 	constructor() {}
 

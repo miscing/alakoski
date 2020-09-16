@@ -8,10 +8,6 @@
 		<mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
 	</button>
 	<a mat-button routerLink="/"><h1 class="brand">{{ companyName.toUpperCase() }}</h1></a>
-	<!-- <span class="spacer"></span> -->
-	<!-- <div *ngIf="!(isHandset$ | async)"> -->
-	<!--	 <a mat-button *ngFor="let item of items" href="{{ item.link }}"> -->
-	<!--		 <img alt="{{ item.name }}" src="{{ item.img }}"> -->
-	<!--	 </a> -->
-	<!-- </div> -->
+	<span *ngIf="!isHandHeld" class="spacer"></span>
+	<app-links *ngIf="!isHandHeld" ></app-links>
 </mat-toolbar>
