@@ -1,11 +1,19 @@
-// @import '~@angular/material/theming';
+@import '~@angular/material/theming';
 // Plus imports for other components in your app.
-@import './app/toolbars/toolbars.component';
+// @import './app/toolbars/toolbars.component';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat-core();
+
+@mixin set-theme-brand($theme) {
+	$accent-palette:  map-get($theme, accent);
+	.brand {
+		// color: mat-color($primary-palette);
+		color: mat-color($accent-palette);
+	}
+}
 
 @mixin set-theme($theme) // define a new @mixin that will be invoked each time the theme is changed
 {
@@ -46,3 +54,4 @@ $brand-color: mat-palette($mat-orange, 600, 500, 400);
 	));
 	@include set-theme($dark-app-theme);
 }
+
