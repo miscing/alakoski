@@ -4,6 +4,11 @@
 		"link":"https://www.google.fi",
 		"img": "assets/logos/Instagram_Logo.png"
 	},
+	{
+		"name": "Facebook",
+		"link":"https://www.google.fi",
+		"img": "assets/logos/Facebook_Logo.png"
+	},
 	{ 
 		"name": "WhatsApp",
 		"link":"https://wa.me/+358440807771",
