@@ -3,9 +3,8 @@
 	<mat-sidenav-container
 		class="spacer">
 		<mat-sidenav #menudrawer
-		class="left-menu"
-		opened="true"
-		mode="side">
+		[opened]="!(isHandHeld | async) ? true :false"
+		[mode]="(isHandHeld | async) ? 'over' : 'side' ">
 			<span class="header item">{{ capitalize("menu") }} </span>
 		</mat-sidenav>
 		<mat-sidenav-content>
