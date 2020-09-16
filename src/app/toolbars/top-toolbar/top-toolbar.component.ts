@@ -1,10 +1,9 @@
 import { Input, Component, OnInit } from '@angular/core';
 
+import { MatDrawer } from '@angular/material/sidenav';
+
 import itemsJson from './items.json';
 import { Item } from './item';
-
-import { DrawerService } from '../drawer.service';
-
 
 @Component({
   selector: 'app-top-toolbar',
@@ -13,17 +12,18 @@ import { DrawerService } from '../drawer.service';
 })
 export class TopToolbarComponent implements OnInit {
 	@Input() isHandHeld: boolean;
+	@Input() menuDrawer :MatDrawer;
 
 	companyName: string = "saneeraus alakoski oy";
 	items : Item[] = itemsJson;
 
-	constructor( private drawerService: DrawerService) {}
+	constructor() {}
 
 	ngOnInit(): void {
 	}
 
 	toggleDrawer() {
-		this.drawerService.toggle();
+		this.menuDrawer.toggle();
 	}
 
 	capitalize(input: string): string {
