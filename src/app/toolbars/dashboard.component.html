@@ -1,11 +1,10 @@
 <div class="max col-container">
-	<app-top-toolbar 
+	<app-top-toolbar
 		[isHandHeld]="(isHandHeld |async)"
 		[menuDrawer]="menudrawer">
 	</app-top-toolbar>
 	<mat-sidenav-container class="spacer">
 		<mat-sidenav #menudrawer
-		[opened]="!(isHandHeld | async) ? true :false"
 		[mode]="(isHandHeld | async) ? 'over' : 'side'">
 			<div class="col-container">
 				<h2>{{ capitalize("menu") }} </h2>
