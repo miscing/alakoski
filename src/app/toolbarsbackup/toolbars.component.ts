@@ -21,7 +21,7 @@ export class ToolbarsComponent implements OnInit {
 
 
 
-	ngOnInit() {
+	ngOnInit(): void {
 		this.isHandset$ = this.breakpointObserver.observe(Breakpoints.Handset)
 			.pipe(
 				map(result => result.matches)

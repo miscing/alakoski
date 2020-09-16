@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-// import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-// import { Observable } from 'rxjs';
-// import { map } from 'rxjs/operators';
+import { Input, Component, OnInit } from '@angular/core';
 
 import itemsJson from './items.json';
 import { Item } from './item';
@@ -13,21 +10,14 @@ import { Item } from './item';
   styleUrls: ['./top-toolbar.component.scss']
 })
 export class TopToolbarComponent implements OnInit {
+	@Input() isHandHeld: boolean;
 
-	// companyName: string = "Saneeraus Alakoski Oy";
-	// isHandset$ : Observable<boolean>;
-	// darkTheme : boolean;
+	companyName: string = "saneeraus alakoski oy";
 	items : Item[] = itemsJson;
 
-	// constructor(private breakpointObserver: BreakpointObserver) {}
 	constructor() {}
 
 	ngOnInit(): void {
-		// this.isHandset$ = this.breakpointObserver.observe(Breakpoints.Handset)
-		// 	.pipe(
-		// 		map(result => result.matches)
-		// 	);
-		// this.darkTheme = true;
 	}
 
 	capitalize(input: string): string {
