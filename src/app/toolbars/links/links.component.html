@@ -1,3 +1,5 @@
-<a mat-button *ngFor="let item of items" href="{{ item.link }}">
-	<img class="item" alt="{{ item.name }}" src="{{ item.img }}">
-</a>
+<mat-toolbar color=primary>
+	<a mat-button *ngFor="let item of items" href="{{ item.link }}">
+		<img class="item" alt="{{ item.name }}" src="{{ item.img }}">
+	</a>
+</mat-toolbar>

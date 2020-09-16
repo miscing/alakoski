@@ -16,16 +16,17 @@
 	}
 }
 
-// @mixin set-theme-menu($theme) {
-// 	$menu-accent: map-get($theme, primary);
-// 	.mat-drawer-inner-container { // Maybe not the smartest catch class
-// 		background-color: mat-color($menu-accent, lighter);
-// 	}
-// }
+@mixin set-theme-menu($theme) {
+	$menu-accent: map-get($theme, primary);
+	.mat-drawer-inner-container { // Maybe not the smartest catch class
+		background-color: mat-color($menu-accent, lighter);
+	}
+}
 
 @mixin set-theme($theme) {
 	@include angular-material-color($theme);
 	@include set-theme-brand($theme);
+	@include set-theme-menu($theme);
 }
 
 // closest to brand color available
@@ -33,7 +34,7 @@ $brand-color: mat-palette($mat-orange, A700, 500, 900);
 
 //  Available color palettes: https://material.io/design/color/
 .light-theme {
-	$light-app-primary: mat-palette($mat-grey, 900, 200);
+	$light-app-primary: mat-palette($mat-grey, 900, 100);
 	$light-app-accent:	$brand-color;
 	$light-app-warn:		mat-palette($mat-red);
 	$light-app-theme: mat-light-theme((
