@@ -16,20 +16,26 @@
 	}
 }
 
-@mixin set-theme($theme) // define a new @mixin that will be invoked each time the theme is changed
-{
-  @include set-theme-brand($theme); // invoke the mixin we defined for component_1
+@mixin set-theme-menu($theme) {
+	$menu-accent: map-get($theme, primary);
+	.menu {
+		background-color: mat-color($menu-accent, lighter);
+	}
+}
+
+@mixin set-theme($theme) {
 	@include angular-material-color($theme);
-  // repeat this for each component that uses theme colors
+	@include set-theme-brand($theme);
+	@include set-theme-menu($theme);
 }
 
 // closest to brand color available
-$brand-color: mat-palette($mat-orange, 600, 500, 400);
+$brand-color: mat-palette($mat-orange, A700, 500, 900);
 
 //  Available color palettes: https://material.io/design/color/
 .light-theme {
-	$light-app-primary: $brand-color;
-	$light-app-accent:	mat-palette($mat-grey, 900);
+	$light-app-primary: mat-palette($mat-grey, 900, 200);
+	$light-app-accent:	$brand-color;
 	$light-app-warn:		mat-palette($mat-red);
 	$light-app-theme: mat-light-theme((
 	color: (
@@ -40,6 +46,20 @@ $brand-color: mat-palette($mat-orange, 600, 500, 400);
 	));
 	@include set-theme($light-app-theme);
 }
+
+// .light-theme {
+// 	$light-app-primary: $brand-color;
+// 	$light-app-accent:	mat-palette($mat-grey, 900, 200);
+// 	$light-app-warn:		mat-palette($mat-red);
+// 	$light-app-theme: mat-light-theme((
+// 	color: (
+// 	primary: $light-app-primary,
+// 	accent: $light-app-accent,
+// 	warn: $light-app-warn,
+// 	)
+// 	));
+// 	@include set-theme($light-app-theme);
+// }
 
 .dark-theme {
 	$dark-app-primary: mat-palette($mat-grey, 900);
