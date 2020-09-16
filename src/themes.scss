@@ -16,17 +16,16 @@
 	}
 }
 
-@mixin set-theme-menu($theme) {
-	$menu-accent: map-get($theme, primary);
-	.mat-drawer-inner-container { // Maybe not the smartest catch class
-		background-color: mat-color($menu-accent, lighter);
-	}
-}
+// @mixin set-theme-menu($theme) {
+// 	$menu-accent: map-get($theme, primary);
+// 	.mat-drawer-inner-container { // Maybe not the smartest catch class
+// 		background-color: mat-color($menu-accent, lighter);
+// 	}
+// }
 
 @mixin set-theme($theme) {
 	@include angular-material-color($theme);
 	@include set-theme-brand($theme);
-	@include set-theme-menu($theme);
 }
 
 // closest to brand color available
