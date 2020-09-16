@@ -1,13 +1,14 @@
-<app-top-toolbar [isHandHeld]="(isHandHeld |async)"></app-top-toolbar>
-<mat-sidenav-container
-			class="spacer">
-	<mat-sidenav #drawer>
-			<!-- class="left-menu" -->
-			<!-- [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" -->
-			<!-- mode="over" -->
-			<!-- (opened)="false"> -->
-	</mat-sidenav>
-	<mat-sidenav-content>
-		<router-outlet></router-outlet>
-	</mat-sidenav-content>
-</mat-sidenav-container>
+<div class="container">
+	<app-top-toolbar [isHandHeld]="(isHandHeld |async)"></app-top-toolbar>
+	<mat-sidenav-container
+		class="spacer">
+		<mat-sidenav #menudrawer
+		mode="over"
+		(opened)="true">
+			menu
+		</mat-sidenav>
+		<mat-sidenav-content>
+			<router-outlet></router-outlet>
+		</mat-sidenav-content>
+	</mat-sidenav-container>
+</div>

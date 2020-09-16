@@ -3,6 +3,8 @@ import { Input, Component, OnInit } from '@angular/core';
 import itemsJson from './items.json';
 import { Item } from './item';
 
+import { DrawerService } from '../drawer.service';
+
 
 @Component({
   selector: 'app-top-toolbar',
@@ -15,13 +17,16 @@ export class TopToolbarComponent implements OnInit {
 	companyName: string = "saneeraus alakoski oy";
 	items : Item[] = itemsJson;
 
-	constructor() {}
+	constructor( private drawerService: DrawerService) {}
 
 	ngOnInit(): void {
+	}
+
+	toggleDrawer() {
+		this.drawerService.toggle();
 	}
 
 	capitalize(input: string): string {
 		return input.charAt(0).toUpperCase() + input.slice(1);
 	}
-
 }

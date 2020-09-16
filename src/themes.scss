@@ -12,6 +12,7 @@
 	.brand {
 		// color: mat-color($primary-palette);
 		color: mat-color($accent-palette);
+		font-family: "Stardos Stencil";
 	}
 }
 
@@ -43,7 +44,6 @@ $brand-color: mat-palette($mat-orange, 600, 500, 400);
 .dark-theme {
 	$dark-app-primary: mat-palette($mat-grey, 900);
 	$dark-app-accent: $brand-color;
-	// The warn palette is optional (defaults to red).
 	$dark-app-warn:    mat-palette($mat-red);
 	$dark-app-theme: mat-dark-theme((
 	color: (
