@@ -5,8 +5,19 @@
 .spacer { // fills space for use with flexbox
 	flex: 1 1 auto;
 }
+
 .container {
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column;
+}
+
+mat-sidenav-container {
+	.item {
+		padding: 2vh 2vw 2vh 1vw;
+	}
+	.header {
+		display: flex;
+		font-size: x-large;
+	}
 }
