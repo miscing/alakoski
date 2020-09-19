@@ -1,0 +1,13 @@
+h1 {
+	flex: 0 1 auto;
+	color: ForestGreen;
+	font-weight: bold;
+}
+
+:host {
+	display: flex;
+	height: 100%;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
