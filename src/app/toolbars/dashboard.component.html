@@ -1,19 +1,17 @@
-<div class="max col-container">
-	<app-top-toolbar
-		[isHandHeld]="(isHandHeld |async)"
-		[menuDrawer]="menudrawer">
-	</app-top-toolbar>
-	<mat-sidenav-container class="spacer">
-		<mat-sidenav #menudrawer
-		[mode]="(isHandHeld | async) ? 'over' : 'side'">
-			<div class="col-container">
-				<h2>{{ capitalize("menu") }} </h2>
-				<span class="spacer"></span>
-				<app-links></app-links>
-			</div>
-		</mat-sidenav>
-		<mat-sidenav-content>
-			<router-outlet></router-outlet>
-		</mat-sidenav-content>
-	</mat-sidenav-container>
-</div>
+<app-top-toolbar
+		 [isHandHeld]="(isHandHeld |async)"
+		 [menuDrawer]="menudrawer">
+</app-top-toolbar>
+<mat-sidenav-container class="spacer">
+	<mat-sidenav #menudrawer
+											 [mode]="(isHandHeld | async) ? 'over' : 'side'">
+		<div class="col-container">
+			<h2>{{ capitalize("menu") }} </h2>
+			<span class="spacer"></span>
+			<app-links></app-links>
+		</div>
+	</mat-sidenav>
+	<mat-sidenav-content>
+		<router-outlet></router-outlet>
+	</mat-sidenav-content>
+</mat-sidenav-container>

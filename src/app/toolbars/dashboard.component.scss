@@ -1,9 +1,12 @@
-.max { //to max out sidenav
-	min-height: 100vh;
+:host { //to max out sidenav
+	height: 100vh;
 }
 
 .col-container { //sets container to column flexbox
 	display: flex;
 	flex-flow: column;
 	height: 100%;
+}
+
+mat-sidenav-content {
 }
