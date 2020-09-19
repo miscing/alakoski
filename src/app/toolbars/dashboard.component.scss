@@ -1,11 +1,15 @@
-:host { //to max out sidenav
-	height: 100vh;
-}
-
-.col-container { //sets container to column flexbox
+@mixin colcontainer { //sets container to column flexbox
 	display: flex;
 	flex-flow: column;
 	height: 100%;
+}
+
+:host { //to max out sidenav
+	@include colcontainer;
+	height: 100vh; // position is important to override mixin height
+}
+.col-container {
+	@include colcontainer;
 }
 
 mat-sidenav-content {
