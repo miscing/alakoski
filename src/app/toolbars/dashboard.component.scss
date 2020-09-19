@@ -9,6 +9,13 @@
 	height: 100vh; // position is important to override mixin height
 }
 
+.fit {
+	display:flex;
+	flex-flow: row;
+	height: 100%;
+	width: 100%;
+}
+
 .col-container {
 	@include colcontainer;
 }

@@ -1,10 +1,11 @@
 <app-top-toolbar
-		 [isHandHeld]="(isHandHeld |async)"
-		 [menuDrawer]="menudrawer">
+			[isHandHeld]="(isHandHeld |async)"
+			[menuDrawer]="menudrawer">
 </app-top-toolbar>
-<mat-sidenav-container class="spacer">
+<mat-sidenav-container class="spacer fit">
 	<mat-sidenav #menudrawer
-											 [mode]="(isHandHeld | async) ? 'over' : 'side'">
+											 [mode]="(isHandHeld | async) ? 'over' : 'side'"
+											 [opened]="true">
 		<div class="col-container">
 			<h2>{{ capitalize("menu") }} </h2>
 			<span class="spacer"></span>
