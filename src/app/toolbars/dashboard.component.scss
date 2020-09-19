@@ -8,9 +8,7 @@
 	@include colcontainer;
 	height: 100vh; // position is important to override mixin height
 }
+
 .col-container {
 	@include colcontainer;
-}
-
-mat-sidenav-content {
 }
