@@ -5,7 +5,7 @@
 <mat-sidenav-container class="spacer fit">
 	<mat-sidenav #menudrawer
 											 [mode]="(isHandHeld | async) ? 'over' : 'side'"
-											 [opened]="(!isHandheld | async)">
+											 [opened]="!(isHandheld | async)">
 		<div class="col-container">
 			<h2>{{ capitalize("menu") }} </h2>
 			<span class="spacer"></span>
