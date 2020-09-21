@@ -13,6 +13,7 @@ import { MatSidenavModule  } from '@angular/material/sidenav';
 import { TopToolbarComponent } from './top-toolbar/top-toolbar.component';
 import { DashboardComponent } from './dashboard.component';
 import { LinksComponent } from './links/links.component';
+import { BottomToolbarComponent } from './bottom-toolbar/bottom-toolbar.component';
 
 
 
@@ -30,6 +31,6 @@ import { LinksComponent } from './links/links.component';
 	exports: [
 		DashboardComponent
 	],
-	declarations: [TopToolbarComponent, DashboardComponent, LinksComponent]
+	declarations: [TopToolbarComponent, DashboardComponent, LinksComponent, BottomToolbarComponent]
 })
 export class ToolbarsModule { }

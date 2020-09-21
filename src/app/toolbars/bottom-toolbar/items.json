@@ -1,0 +1,17 @@
+[
+	{
+		"name": "CompanyC",
+		"link":"https://www.instagram.com/saneerausalakoskioy",
+		"img": "assets/partners/Instagram_Logo.png"
+	},
+	{
+		"name": "CompanyB",
+		"link":"https://www.facebook.com/Saneeraus-Alakoski-Oy-1879971592051678",
+		"img": "assets/partners/Facebook_Logo.png"
+	},
+	{ 
+		"name": "CompanyA",
+		"link":"https://wa.me/+358440807771",
+		"img": "assets/partners/WhatsApp_Logo.png"
+	}
+]
