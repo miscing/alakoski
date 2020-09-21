@@ -9,7 +9,7 @@
 		<div class="col-container">
 			<h2>{{ capitalize("menu") }} </h2>
 			<span class="spacer"></span>
-			<app-links></app-links>
+			<app-links *ngIf="(isHandHeld | async)"></app-links>
 		</div>
 	</mat-sidenav>
 	<mat-sidenav-content>
