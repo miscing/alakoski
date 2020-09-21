@@ -1,9 +1,9 @@
 mat-toolbar {
-	justify-content: center;
+	justify-content: space-evenly;
 }
 
 .item {
-	height: 8vh;
+	height: 7vh;
 	width: auto;
-	padding: 0.5vh;
+	margin: 1vh 0;
 }
