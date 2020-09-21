@@ -5,14 +5,14 @@
 <mat-sidenav-container class="spacer fit">
 	<mat-sidenav #menudrawer
 											 [mode]="(isHandHeld | async) ? 'over' : 'side'"
-											 [opened]="!(isHandheld | async)">
+											 [opened]="!(isHandHeld | async)">
 		<div class="col-container">
 			<h2>{{ capitalize("menu") }} </h2>
 			<span class="spacer"></span>
 			<app-links *ngIf="(isHandHeld | async)"></app-links>
 		</div>
 	</mat-sidenav>
-	<mat-sidenav-content>
+	<mat-sidenav-content class="max-width">
 		<router-outlet></router-outlet>
 	</mat-sidenav-content>
 </mat-sidenav-container>

@@ -4,9 +4,15 @@ h1 {
 	font-weight: bold;
 }
 
+img {
+	padding: 5vh 0;
+	height: 30%
+}
+
 :host {
 	display: flex;
 	height: 100%;
+	width: 100%;
 	flex-flow: column;
 	justify-content: center;
 	align-items: center;

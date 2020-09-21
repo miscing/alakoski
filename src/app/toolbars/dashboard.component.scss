@@ -16,6 +16,10 @@
 	width: 100%;
 }
 
+.max-width {
+	width: 100%;
+}
+
 .col-container {
 	@include colcontainer;
 }
