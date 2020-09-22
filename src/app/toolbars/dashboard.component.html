@@ -8,6 +8,7 @@
 											 [opened]="!(isHandHeld | async)">
 		<div class="col-container">
 			<h2>{{ capitalize("menu") }} </h2>
+			<h2>{{ capitalize("placeholder text") }} </h2>
 			<span class="spacer"></span>
 			<app-links *ngIf="(isHandHeld | async)"></app-links>
 		</div>
