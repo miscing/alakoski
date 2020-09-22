@@ -9,6 +9,7 @@ import { MatListModule  } from '@angular/material/list';
 import { MatIconModule  } from '@angular/material/icon';
 import { MatMenuModule  } from '@angular/material/menu';
 import { MatSidenavModule  } from '@angular/material/sidenav';
+// import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { TopToolbarComponent } from './top-toolbar/top-toolbar.component';
 import { DashboardComponent } from './dashboard.component';
@@ -26,6 +27,7 @@ import { BottomToolbarComponent } from './bottom-toolbar/bottom-toolbar.componen
 		MatListModule,
 		AppRoutingModule,
 		MatSidenavModule,
+		// ScrollingModule,
 		MatMenuModule
 	],
 	exports: [
