@@ -17,9 +17,9 @@
 }
 
 @mixin set-theme-menu($theme) {
-	$menu-accent: map-get($theme, primary);
-	.mat-drawer-inner-container { // Maybe not the smartest catch class
-		background-color: mat-color($menu-accent, lighter);
+	$menu-primary: map-get($theme, primary);
+	.mat-drawer-inner-container { // maybe not the smartest catch class
+		background-color: mat-color($menu-primary, lighter);
 	}
 }
 
@@ -30,7 +30,7 @@
 }
 
 // closest to brand color available
-$brand-color: mat-palette($mat-orange, A700, 500, 900);
+$brand-color: mat-palette($mat-orange, A700, 200, 900);
 
 //  Available color palettes: https://material.io/design/color/
 .light-theme {
@@ -61,16 +61,16 @@ $brand-color: mat-palette($mat-orange, A700, 500, 900);
 	@include set-theme($dark-app-theme);
 }
 
-// .light-theme {
-// 	$light-app-primary: $brand-color;
-// 	$light-app-accent:	mat-palette($mat-grey, 900, 200);
-// 	$light-app-warn:		mat-palette($mat-red);
-// 	$light-app-theme: mat-light-theme((
-// 	color: (
-// 	primary: $light-app-primary,
-// 	accent: $light-app-accent,
-// 	warn: $light-app-warn,
-// 	)
-// 	));
-// 	@include set-theme($light-app-theme);
-// }
+.orange-theme {
+	$light-app-primary: $brand-color;
+	$light-app-accent:	mat-palette($mat-grey, 900, 200);
+	$light-app-warn:		mat-palette($mat-red);
+	$light-app-theme: mat-light-theme((
+	color: (
+	primary: $light-app-primary,
+	accent: $light-app-accent,
+	warn: $light-app-warn,
+	)
+	));
+	@include set-theme($light-app-theme);
+}

@@ -15,6 +15,7 @@ import { TopToolbarComponent } from './top-toolbar/top-toolbar.component';
 import { DashboardComponent } from './dashboard.component';
 import { LinksComponent } from './links/links.component';
 import { BottomToolbarComponent } from './bottom-toolbar/bottom-toolbar.component';
+import { ThemesComponent } from './themes/themes.component';
 
 
 
@@ -33,6 +34,6 @@ import { BottomToolbarComponent } from './bottom-toolbar/bottom-toolbar.componen
 	exports: [
 		DashboardComponent
 	],
-	declarations: [TopToolbarComponent, DashboardComponent, LinksComponent, BottomToolbarComponent]
+	declarations: [TopToolbarComponent, DashboardComponent, LinksComponent, BottomToolbarComponent, ThemesComponent]
 })
 export class ToolbarsModule { }
