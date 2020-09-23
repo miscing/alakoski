@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { BehaviorSubject, Observable } from 'rxjs';
 
-const themes = [ "light-theme", "dark-theme", "orange-theme" ];
+const themes = [ "light-theme", "dark-theme", "orange-theme", "darkorange-theme" ];
 
 @Injectable({
 	providedIn: 'root'

@@ -1,10 +1,9 @@
-<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="theme change menu">
-	<mat-icon>panorama_fish_eye</mat-icon></button>
+<mat-radio-button color="accent" [matMenuTriggerFor]="menu" aria-label="theme change menu"></mat-radio-button>
 <mat-menu #menu="matMenu">
 	<button mat-menu-item
 		*ngFor="let t of themes"
 					(click)="changeTheme(t)">
+		{{ t }}
 		<!-- <mat-icon  class="bg" alt="{{ t }}">radio_button_checked</mat-icon> -->
-		<mat-icon class="own" [ngclass]="t" alt="{{ t }}">radio_button_checked</mat-icon>
 	</button>
 </mat-menu>
