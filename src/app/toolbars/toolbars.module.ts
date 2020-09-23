@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AppRoutingModule } from '../app-routing.module';
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule  } from '@angular/material/list';
 import { MatIconModule  } from '@angular/material/icon';
 import { MatMenuModule  } from '@angular/material/menu';
 import { MatSidenavModule  } from '@angular/material/sidenav';
-// import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatRadioModule } from '@angular/material/radio';
 
+import { AppRoutingModule } from '../app-routing.module';
 import { TopToolbarComponent } from './top-toolbar/top-toolbar.component';
 import { DashboardComponent } from './dashboard.component';
 import { LinksComponent } from './links/links.component';
 import { BottomToolbarComponent } from './bottom-toolbar/bottom-toolbar.component';
+import { ThemesComponent } from './themes/themes.component';
 
 
 
@@ -27,12 +27,12 @@ import { BottomToolbarComponent } from './bottom-toolbar/bottom-toolbar.componen
 		MatListModule,
 		AppRoutingModule,
 		MatSidenavModule,
-		// ScrollingModule,
+		MatRadioModule,
 		MatMenuModule
 	],
 	exports: [
 		DashboardComponent
 	],
-	declarations: [TopToolbarComponent, DashboardComponent, LinksComponent, BottomToolbarComponent]
+	declarations: [TopToolbarComponent, DashboardComponent, LinksComponent, BottomToolbarComponent, ThemesComponent]
 })
 export class ToolbarsModule { }

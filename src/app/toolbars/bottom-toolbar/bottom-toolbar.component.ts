@@ -49,7 +49,7 @@ export class scrollerController {
 						if ( x != undefined ) {
 							let offset = (x as CdkScrollable).measureScrollOffset("top");
 							// console.log(offset);
-							if ( offset > oldOffset && offset > triggerDiff ) {
+							if ( offset >= oldOffset && offset > triggerDiff ) {
 								obs.next(true);
 							} else if ( offset < oldOffset) {
 								obs.next(false);
