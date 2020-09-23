@@ -1,4 +1,4 @@
-<mat-radio-button color="accent" [matMenuTriggerFor]="menu" aria-label="theme change menu"></mat-radio-button>
+<mat-radio-button [checked]="true" color="warn" [matMenuTriggerFor]="menu" aria-label="theme change menu"></mat-radio-button>
 <mat-menu #menu="matMenu">
 	<button mat-menu-item
 		*ngFor="let t of themes"
