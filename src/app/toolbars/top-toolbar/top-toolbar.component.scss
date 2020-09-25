@@ -1,4 +1,10 @@
 .brand {
-	font-size: 5vmin;
-	margin: 2vh 0;
+	font-size: 7vmin;
+	margin: 3vh 0;
+}
+
+.hand-held {
+	.brand {
+		font-size: 5vmin;
+	}
 }
