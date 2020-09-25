@@ -25,14 +25,14 @@ export class BottomToolbarComponent implements OnInit, AfterViewInit {
 	ngOnInit(): void {
 		// this.isHide = true;
 		this.hide = this.sController.shouldHide();
-		console.log(this.hide);
-		this.hide.subscribe( x => { console.log(x) });
+		// console.log(this.hide);
+		// this.hide.subscribe( x => { console.log(x) });
 	}
 
 	ngAfterViewInit() : void {
 		this.sController.regService(this.scrollDispatcher.scrolled());
-		this.hide.subscribe( x => { console.log(x) });
-		console.log(this.hide);
+		// this.hide.subscribe( x => { console.log(x) });
+		// console.log(this.hide);
 	}
 }
 
@@ -66,7 +66,7 @@ export class scrollerController {
 		this.scroller.subscribe(
 			x => {
 				let offset = (x as CdkScrollable).measureScrollOffset("top");
-				console.log(offset);
+				// console.log(offset);
 				// if ( offset >= oldOffset && offset > triggerDiff && !oldValue) {
 				if ( offset >= oldOffset && offset > triggerDiff) {
 					this.bs.next(true);
