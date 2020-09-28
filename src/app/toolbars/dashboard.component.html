@@ -4,10 +4,9 @@
 </app-top-toolbar>
 <mat-sidenav-container class="spacer fit">
 	<mat-sidenav #menudrawer
-											 [mode]="(isHandHeld | async) ? 'over' : 'side'"
-											 [opened]="!(isHandHeld | async)">
+											 mode="over">
 		<div class="col-container">
-			<h2>{{ capitalize("menu") }} </h2>
+			<h2>{{ capitalize("menu") }}</h2>
 			<h2>{{ capitalize("placeholder text") }} </h2>
 			<span class="spacer"></span>
 			<app-links *ngIf="(isHandHeld | async)"></app-links>
