@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+	content = `Rakennustyöt lattiasta kattoon.
+Työ kuvia löytyy instagramista.`
 
-  ngOnInit(): void {
-  }
 
+
+	constructor() { }
+
+	ngOnInit(): void {
+	}
 }
