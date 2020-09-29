@@ -3,6 +3,6 @@
 	<a mat-tab-link *ngFor="let link of paths"
 		 (click)="activeLink = link"
 		 [active]="activeLink == link"
-		 href="{{link}}"> {{ capitalize(link) }} </a>
+		 routerLink="{{link}}"> {{ capitalize(link) }} </a>
 </nav>
 <router-outlet></router-outlet>

@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { ContactdetailsComponent } from './contactdetails/contactdetails.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
 	{ path: "", component: HomeComponent },
 	{ path: "home",  redirectTo: '', pathMatch: 'full' },
+	{ path: "yhteistiedot", component: ContactdetailsComponent},
 	{ path: "**", component: PagenotfoundComponent }
 ];
 
