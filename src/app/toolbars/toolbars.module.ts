@@ -9,7 +9,7 @@ import { MatIconModule  } from '@angular/material/icon';
 import { MatMenuModule  } from '@angular/material/menu';
 import { MatSidenavModule  } from '@angular/material/sidenav';
 import { MatRadioModule } from '@angular/material/radio';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { AppRoutingModule } from '../app-routing.module';
 import { TopToolbarComponent } from './top-toolbar/top-toolbar.component';
