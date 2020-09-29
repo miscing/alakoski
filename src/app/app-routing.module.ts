@@ -6,8 +6,8 @@ import { ContactdetailsComponent } from './contactdetails/contactdetails.compone
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
-	{ path: "", component: HomeComponent , data: {animation: 'HomePage'} },
-	{ path: "etusivu",  redirectTo: '', pathMatch: 'full'},
+	{ path: "",  redirectTo: '', pathMatch: 'full'},
+	{ path: "etusivu", component: HomeComponent , data: {animation: 'HomePage'} },
 	{ path: "yhteistiedot", component: ContactdetailsComponent, data: {animation: 'AboutPage'} },
 	{ path: "**", component: PagenotfoundComponent }
 ];
