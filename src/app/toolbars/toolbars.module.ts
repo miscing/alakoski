@@ -16,6 +16,7 @@ import { DashboardComponent } from './dashboard.component';
 import { LinksComponent } from './links/links.component';
 import { BottomToolbarComponent } from './bottom-toolbar/bottom-toolbar.component';
 import { ThemesComponent } from './themes/themes.component';
+import { RoutesToolbarComponent } from './routes-toolbar/routes-toolbar.component';
 
 
 
@@ -40,7 +41,8 @@ import { ThemesComponent } from './themes/themes.component';
 		DashboardComponent,
 		LinksComponent,
 		BottomToolbarComponent,
-		ThemesComponent
+		ThemesComponent,
+		RoutesToolbarComponent
 	]
 })
 export class ToolbarsModule { }
