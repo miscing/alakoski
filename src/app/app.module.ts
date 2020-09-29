@@ -7,10 +7,12 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { ToolbarsModule } from './toolbars/toolbars.module';
 import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
 	declarations: [
 		HomeComponent,
+		PagenotfoundComponent,
 		AppComponent
 	],
 	imports: [
