@@ -9,11 +9,14 @@ import { AppRoutingModule } from '../../app-routing.module';
 })
 export class RoutesToolbarComponent implements OnInit {
 	paths :string[];
+	activeLink :string;
+
 
   constructor(private appRoutingModule :AppRoutingModule) { }
 
   ngOnInit(): void {
 		this.paths = this.appRoutingModule.routes();
+		this.activeLink = this.paths[0];
   }
 
 	capitalize(input: string): string {
