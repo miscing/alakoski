@@ -6,9 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { ToolbarsModule } from './toolbars/toolbars.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
 	declarations: [
+		HomeComponent,
 		AppComponent
 	],
 	imports: [

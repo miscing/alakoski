@@ -1,4 +1,7 @@
-<div cdkScrollable class="main-container">
-	<p class="main-text">{{content}}</p>
+<div cdkScrollable class="main-container" [class]="(isHandHeld | async) ? 'handheld' : 'desktop'">
+	<div>
+		<h2>{{motto}}</h2>
+		<p>{{content}}</p>
+	</div>
 	<img alt="alakoski saneeraus harbor cool" src="assets/alakoski_boat.jpg">
 </div>

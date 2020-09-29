@@ -1,17 +1,37 @@
 .main-container {
-	margin: 5vh 8vw;
+	margin: 0 10vw;
 	display:flex;
+	max-width: 100%;
+	height: 100%;
+	img {
+		height: auto;
+		padding: 2vh 2vw;
+	}
+	div {
+		padding: 5vh 0 0 0;
+	}
+	p, h2 {
+		padding: 2vh 2vw;
+		white-space: pre-wrap;
+	}
+}
+
+.handheld {
 	flex-flow: column;
+	align-items: center;
+	p {
+		text-align: center;
+	}
+	img {
+		max-width:100%;
+	}
 }
 
-img {
-	object-fit: contain;
-}
-
-.main-text {
-	// font-size: x-large;
-	line-height: 2;
-	font-size: 2vmax;
-	text-align: center;
-	white-space: pre-wrap;
+.desktop {
+	flex-flow: row;
+	img {
+		align-self: center;
+		width: 30vw;
+		height: auto;
+	}
 }

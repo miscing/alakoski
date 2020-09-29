@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,6 +21,7 @@ import { ThemesComponent } from './themes/themes.component';
 
 @NgModule({
 	imports: [
+		BrowserModule,
 		CommonModule,
 		MatToolbarModule,
 		MatButtonModule,
@@ -33,6 +35,12 @@ import { ThemesComponent } from './themes/themes.component';
 	exports: [
 		DashboardComponent
 	],
-	declarations: [TopToolbarComponent, DashboardComponent, LinksComponent, BottomToolbarComponent, ThemesComponent]
+	declarations: [
+		TopToolbarComponent,
+		DashboardComponent,
+		LinksComponent,
+		BottomToolbarComponent,
+		ThemesComponent
+	]
 })
 export class ToolbarsModule { }
