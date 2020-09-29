@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,6 +25,7 @@ import { RoutesToolbarComponent } from './routes-toolbar/routes-toolbar.componen
 @NgModule({
 	imports: [
 		BrowserModule,
+		BrowserAnimationsModule,
 		CommonModule,
 		MatToolbarModule,
 		MatButtonModule,

@@ -13,8 +13,8 @@
 			<app-links *ngIf="(isHandHeld | async)"></app-links>
 		</div>
 	</mat-sidenav>
-	<mat-sidenav-content class="max-width">
-		<router-outlet></router-outlet>
+	<mat-sidenav-content class="max-width" [@routeAnimations]="prepareRoute(outlet)">
+		<router-outlet #outlet="outlet"></router-outlet>
 	</mat-sidenav-content>
 </mat-sidenav-container>
 <app-bottom-toolbar></app-bottom-toolbar>
