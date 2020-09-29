@@ -14,7 +14,7 @@
 	</mat-sidenav>
 	<mat-sidenav-content class="max-width">
 		<app-routes-toolbar *ngIf="!(isHandHeld | async)"></app-routes-toolbar>
-		<router-outlet *ngIf="(isHandHeld | async)"></router-outlet>
+		<router-outlet></router-outlet>
 	</mat-sidenav-content>
 </mat-sidenav-container>
 <app-bottom-toolbar></app-bottom-toolbar>
