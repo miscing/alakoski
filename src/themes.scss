@@ -14,19 +14,10 @@
 		color: mat-color($accent-palette);
 		font-family: "Stardos Stencil";
 	}
-	.brand-lighter {
-		color: mat-color($accent-palette, lighter);
-	}
 }
 
 @mixin set-theme-menu($theme) {
 	$menu-primary: map-get($theme, primary);
-	.mat-drawer-inner-container { // maybe not the smartest catch class
-		background-color: mat-color($menu-primary, lighter);
-	}
-	.lighter-shade {
-		background-color: mat-color($menu-primary, lighter);
-	}
 }
 
 @mixin set-theme($theme) {
