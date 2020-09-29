@@ -1,0 +1,7 @@
+<nav mat-tab-nav-bar mat-stretch-tabs
+		 [color]="'accent'">
+	<a mat-tab-link *ngFor="let link of paths"
+		 routerLinkActive #rla="routerLinkActive"
+		 [active]="rla.isActive"
+		 routerLink="{{link}}"> {{ capitalize(link) }} </a>
+</nav>
