@@ -1,1 +1,5 @@
-<mat-toolbar class="lighter-shade"></mat-toolbar>
+<mat-toolbar class="lighter-shade">
+	<a mat-button *ngFor="let path of paths" href="{{ path }}">
+		<h3 class="brand-lighter">{{ capitalize(path) }}</h3>
+	</a>
+</mat-toolbar>
