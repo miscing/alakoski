@@ -1,1 +1,4 @@
-<mat-radio-button aria-label="theme toggle" (click)=themesService.toggle()></mat-radio-button>
+<button mat-icon-button aria-label="toggle theme button"
+	(click)="toggle()">
+	<mat-icon aria-label="icon toggle theme light">{{ (light | async) ? 'radio_button_unchecked' : 'radio_button_checked' }}</mat-icon>
+</button>

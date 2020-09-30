@@ -26,6 +26,10 @@ export class ThemesService {
 		}
 	}
 
+	currentTheme() :string {
+		return this.theme;
+	}
+
 	// Returns an observable that triggers on theme change sending the theme class
 	getTheme() :Observable<string> {
 		return this.bs;
