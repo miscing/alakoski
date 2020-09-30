@@ -4,6 +4,13 @@
 	height: 100%;
 }
 
-a {
-	margin: 2vh 0;
+mat-nav-list {
+	padding: 0 0 0 0;
+	a {
+		padding: 4vh 0;
+		font-size: x-large;
+		font-weight: 500;
+		border-style: none none solid none;
+		border-color: lightgrey;
+	}
 }
