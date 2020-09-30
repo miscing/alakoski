@@ -29,10 +29,6 @@ export class DashboardComponent implements OnInit {
 		);
 	}
 
-	capitalize(input: string): string {
-		return input.charAt(0).toUpperCase() + input.slice(1);
-	}
-
 	prepareRoute(outlet: RouterOutlet) {
 		return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
 	}

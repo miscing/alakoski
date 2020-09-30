@@ -1,16 +1,7 @@
-@mixin colcontainer { //sets container to column flexbox
+:host { //sets container to column flexbox
 	display: flex;
 	flex-flow: column;
-	height: 100%;
-}
-
-:host { //to max out sidenav
-	@include colcontainer;
 	height: 100vh; // position is important to override mixin height
-}
-
-.col-container {
-	@include colcontainer;
 }
 
 .fit {

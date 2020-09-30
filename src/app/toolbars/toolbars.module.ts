@@ -18,6 +18,7 @@ import { LinksComponent } from './links/links.component';
 import { BottomToolbarComponent } from './bottom-toolbar/bottom-toolbar.component';
 import { ThemesComponent } from './themes/themes.component';
 import { RoutesToolbarComponent } from './routes-toolbar/routes-toolbar.component';
+import { HandheldMenuComponent } from './handheld-menu/handheld-menu.component';
 
 
 
@@ -44,7 +45,8 @@ import { RoutesToolbarComponent } from './routes-toolbar/routes-toolbar.componen
 		LinksComponent,
 		BottomToolbarComponent,
 		ThemesComponent,
-		RoutesToolbarComponent
+		RoutesToolbarComponent,
+		HandheldMenuComponent
 	]
 })
 export class ToolbarsModule { }

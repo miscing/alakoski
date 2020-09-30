@@ -1,0 +1,9 @@
+:host { //sets container to column flexbox
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+}
+
+a {
+	margin: 2vh 0;
+}
