@@ -49,33 +49,3 @@ warn: $app-warn,
 	@include set-theme($dtheme);
 	@include set-nav-dark($dtheme);
 }
-
-
-//TODO: remove all this and references in component
-.orange-theme {
-	$light-app-primary: $brand-color;
-	$light-app-accent:	mat-palette($mat-grey, 900, 200);
-	$light-app-warn:		mat-palette($mat-red);
-	$light-app-theme: mat-light-theme((
-	color: (
-	primary: $light-app-primary,
-	accent: $light-app-accent,
-	warn: $light-app-warn,
-	)
-	));
-	@include set-theme($light-app-theme);
-}
-
-.darkorange-theme {
-	$light-app-primary: $brand-color;
-	$light-app-accent:	mat-palette($mat-grey, 900, 800);
-	$light-app-warn:		mat-palette($mat-red);
-	$light-app-theme: mat-dark-theme((
-	color: (
-	primary: $light-app-primary,
-	accent: $light-app-accent,
-	warn: $light-app-warn,
-	)
-	));
-	@include set-theme($light-app-theme);
-}

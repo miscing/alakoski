@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { BehaviorSubject, Observable } from 'rxjs';
 
-const themes = [ "light-theme", "dark-theme", "orange-theme", "darkorange-theme" ];
+const themes = [ "light-theme", "dark-theme" ];
 
 @Injectable({
 	providedIn: 'root'
@@ -12,13 +12,18 @@ export class ThemesService {
 	private bs :BehaviorSubject<string>;
 
 	constructor() {
-		this.theme = themes[0]; //default theme
+		this.theme = themes[0]; //default theme TODO: read cookie for old theme
 		this.bs = new BehaviorSubject<string>(this.theme);
 	}
 
-	setTheme(theme :string) {
-		this.theme = theme;
-		this.bs.next(theme);
+	toggle() {
+		if (this.theme == themes[0]) {
+			this.theme = themes[1];
+			this.bs.next(themes[1]);
+		} else {
+			this.theme = themes[0];
+			this.bs.next(themes[0]);
+		}
 	}
 
 	currentTheme() :string {
@@ -28,9 +33,5 @@ export class ThemesService {
 	// Returns an observable that triggers on theme change sending the theme class
 	getTheme() :Observable<string> {
 		return this.bs;
-	}
-
-	getThemes() :string[] {
-		return themes;
 	}
 }

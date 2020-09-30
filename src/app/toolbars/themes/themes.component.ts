@@ -1,30 +1,34 @@
-import { HostBinding, Component, OnInit } from '@angular/core';
-import { OverlayContainer } from '@angular/cdk/overlay';
+import { Component, OnInit } from '@angular/core';
+
+import { BehaviorSubject } from 'rxjs';
 
 import { ThemesService } from '../../themes.service';
 
 @Component({
-  selector: 'app-themes',
-  templateUrl: './themes.component.html',
-  styleUrls: ['./themes.component.scss']
+	selector: 'app-themes',
+	templateUrl: './themes.component.html',
+	styleUrls: ['./themes.component.scss']
 })
 export class ThemesComponent implements OnInit {
-	themes :string[];
+	light :BehaviorSubject<boolean>;
+	private currentValue :boolean;
 
-	@HostBinding('class') componentCssClass;
-
-  constructor(private themesService :ThemesService, private overlayContainer: OverlayContainer) {
-		let curTheme = this.themesService.currentTheme();
-		this.overlayContainer.getContainerElement().classList.add(curTheme);
-		this.componentCssClass = curTheme;
+	constructor(private themesService :ThemesService) {
 	}
 
-  ngOnInit(): void {
-		this.themes = this.themesService.getThemes();
-  }
-
-	changeTheme(to :string) {
-		this.themesService.setTheme(to);
+	ngOnInit(): void {
+		if (this.themesService.currentTheme() == "light") {
+			this.light = new BehaviorSubject<boolean>(true);
+			this.currentValue = true;
+		} else {
+			this.light = new BehaviorSubject<boolean>(false);
+			this.currentValue = false;
+		}
 	}
 
+	toggle() :void {
+		this.currentValue = !this.currentValue;
+		this.light.next(this.currentValue);
+		this.themesService.toggle();
+	}
 }
