@@ -41,18 +41,17 @@ warn: $app-warn,
 	$p-palette:  map-get($theme, primary);
 	.mat-tab-nav-bar {
 		background-color: mat-color($p-palette, lighter);
-		// background-color: red;
 	}
 }
 
 .dark-theme {
-	@include set-theme(mat-dark-theme($app-theme));
-	@include set-nav-dark(mat-dark-theme($app-theme));
+	$dtheme: mat-dark-theme($app-theme);
+	@include set-theme($dtheme);
+	@include set-nav-dark($dtheme);
 }
 
 
-// to be removed
-
+//TODO: remove all this and references in component
 .orange-theme {
 	$light-app-primary: $brand-color;
 	$light-app-accent:	mat-palette($mat-grey, 900, 200);
