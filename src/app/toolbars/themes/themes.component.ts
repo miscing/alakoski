@@ -1,5 +1,4 @@
-import { HostBinding, Component, OnInit } from '@angular/core';
-import { OverlayContainer } from '@angular/cdk/overlay';
+import { Component, OnInit } from '@angular/core';
 
 import { ThemesService } from '../../themes.service';
 
@@ -9,22 +8,11 @@ import { ThemesService } from '../../themes.service';
   styleUrls: ['./themes.component.scss']
 })
 export class ThemesComponent implements OnInit {
-	themes :string[];
 
-	@HostBinding('class') componentCssClass;
-
-  constructor(private themesService :ThemesService, private overlayContainer: OverlayContainer) {
-		let curTheme = this.themesService.currentTheme();
-		this.overlayContainer.getContainerElement().classList.add(curTheme);
-		this.componentCssClass = curTheme;
+  constructor(public themesService :ThemesService) {
 	}
 
   ngOnInit(): void {
-		this.themes = this.themesService.getThemes();
   }
-
-	changeTheme(to :string) {
-		this.themesService.setTheme(to);
-	}
 
 }
