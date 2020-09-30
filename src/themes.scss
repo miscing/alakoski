@@ -1,6 +1,5 @@
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
-// @import './app/toolbars/toolbars.component';
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -10,25 +9,19 @@
 @mixin set-theme-brand($theme) {
 	$accent-palette:  map-get($theme, accent);
 	.brand {
-		// color: mat-color($primary-palette);
 		color: mat-color($accent-palette);
 		font-family: "Stardos Stencil";
 	}
 }
 
-@mixin set-theme-menu($theme) {
-	$menu-primary: map-get($theme, primary);
-}
 
 @mixin set-theme($theme) {
 	@include angular-material-color($theme);
 	@include set-theme-brand($theme);
-	@include set-theme-menu($theme);
 }
 
 // closest to brand color available
 $brand-color: mat-palette($mat-orange, A700, 400, 900);
-
 //  Available color palettes: https://material.io/design/color/
 $app-primary: mat-palette($mat-grey, 900, 800);
 $app-accent:	$brand-color;
@@ -44,10 +37,21 @@ warn: $app-warn,
 	@include set-theme(mat-light-theme($app-theme));
 }
 
-.dark-theme {
-	@include set-theme(mat-dark-theme($app-theme));
+@mixin set-nav-dark($theme) {
+	$p-palette:  map-get($theme, primary);
+	.mat-tab-nav-bar {
+		background-color: mat-color($p-palette, lighter);
+	}
 }
 
+.dark-theme {
+	$dtheme: mat-dark-theme($app-theme);
+	@include set-theme($dtheme);
+	@include set-nav-dark($dtheme);
+}
+
+
+//TODO: remove all this and references in component
 .orange-theme {
 	$light-app-primary: $brand-color;
 	$light-app-accent:	mat-palette($mat-grey, 900, 200);
