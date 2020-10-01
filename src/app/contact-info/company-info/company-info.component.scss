@@ -1,0 +1,28 @@
+:host {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+	h1 {
+		margin: 7vh 0 0 3vw;
+		font-size: 5vw;
+	}
+	.info {
+		margin: 9vh 4vw;
+		h3 {
+			font-size: xx-large;
+			font-family: "Stardos Stencil";
+		}
+		a {
+			text-decoration: none;
+		}
+		// a:hover {
+			// 	text-decoration: none;
+			// 	color: white;
+		// }
+		p, a {
+			font-size: x-large;
+			margin: 2vh 0;
+		}
+	}
+}

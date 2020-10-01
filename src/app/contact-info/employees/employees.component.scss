@@ -1,0 +1,17 @@
+:host {
+	margin: 4vh 0;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	.employee {
+		display: flex;
+		height: 20vh;
+		.content {
+			margin: 2vh 3vw;
+		}
+		img {
+			height: 100%;
+		}
+	}
+}
