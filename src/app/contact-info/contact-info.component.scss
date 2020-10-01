@@ -6,12 +6,11 @@
 
 :host {
 	@include column;
-	height: 100%;
+	min-height: 100%;
 }
 
 mat-card {
 	margin: 5vh 0 0 0;
 	width: 90%;
-	padding: 0 0;
 	@include column;
 }

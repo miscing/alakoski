@@ -1,7 +1,11 @@
-<h1 class="brand-lighter">Yhteistiedot</h1>
-<div class="info">
+<h1 class="rel-font brand-lighter">Yhteistiedot</h1>
+<!-- <h1>Yhteistiedot</h1> -->
+<mat-list class="info">
 	<h3>{{ company.name }}</h3>
-	<a class="text-color" href="mailto:{{ company.email }}">{{ company.email }}</a>
-	<p>{{ company.phone }}</p>
-	<p>{{ company.area }}</p>
-</div>
+	<mat-divider [inset]="true"></mat-divider>
+	<mat-list-item>
+		<a class="text-color" href="mailto:{{ company.email }}">{{ company.email }}</a>
+	</mat-list-item>
+	<mat-list-item>{{ company.phone }}</mat-list-item>
+	<mat-list-item>{{ company.area }}</mat-list-item>
+</mat-list>
