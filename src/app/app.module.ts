@@ -6,18 +6,18 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { AppComponent } from './app.component';
 import { ToolbarsModule } from './toolbars/toolbars.module';
+import { ContactInfoModule } from './contact-info/contact-info.module';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { ContactdetailsComponent } from './contactdetails/contactdetails.component';
 
 @NgModule({
 	declarations: [
 		HomeComponent,
 		PagenotfoundComponent,
-		AppComponent,
-		ContactdetailsComponent
+		AppComponent
 	],
 	imports: [
+		ContactInfoModule,
 		ScrollingModule,
 		ToolbarsModule,
 		BrowserModule,
