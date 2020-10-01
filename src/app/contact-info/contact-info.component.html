@@ -1,22 +1,4 @@
 <mat-card class="outer">
-	<div class="lighter-primary heading">
-		<h1 class="brand-lighter">Yhteistiedot</h1>
-		<div class="info">
-			<h3>{{ aInfo.company.name }}</h3>
-			<a class="text-color" href="mailto:{{ aInfo.company.email }}">{{ aInfo.company.email }}</a>
-			<p>{{ aInfo.company.phone }}</p>
-			<p>{{ aInfo.company.area }}</p>
-		</div>
-	</div>
-	<!-- <div class="employees"> -->
-	<!-- 	<mat-card class="employee" *ngFor="let e of aInfo.employees"> -->
-	<!-- 		<div class="content"> -->
-	<!-- 			<mat-card-title>{{ e.firstName + e.surName }}</mat-card-title> -->
-	<!-- 			<mat-card-subtitle>{{ e.title }}</mat-card-subtitle> -->
-	<!-- 			<p >{{ e.phone }}</p> -->
-	<!-- 			<p >{{ e.email }}</p> -->
-	<!-- 		</div> -->
-	<!-- 		<img src="{{ e.pic }}"> -->
-	<!-- 	</mat-card> -->
-	<!-- </div> -->
-<!-- </mat-card> -->
+	<app-company-info [company]="aInfo.company"></app-company-info>
+	<app-employees [employees]="aInfo.employees"></app-employees>
+</mat-card>

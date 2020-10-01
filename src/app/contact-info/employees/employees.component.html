@@ -1,0 +1,11 @@
+<div class="employees">
+	<mat-card class="employee" *ngFor="let e of employees">
+		<div class="content">
+			<mat-card-title>{{ e.firstName + e.surName }}</mat-card-title>
+			<mat-card-subtitle>{{ e.title }}</mat-card-subtitle>
+			<p >{{ e.phone }}</p>
+			<p >{{ e.email }}</p>
+		</div>
+		<img src="{{ e.pic }}">
+	</mat-card>
+</div>
