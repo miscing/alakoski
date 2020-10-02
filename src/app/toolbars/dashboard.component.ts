@@ -28,7 +28,6 @@ export class DashboardComponent implements OnInit {
 		.pipe(
 			map(result => !result.matches)
 		);
-		this.isHandHeld.subscribe( x => { console.log(x) } );
 	}
 
 	prepareRoute(outlet: RouterOutlet) {
