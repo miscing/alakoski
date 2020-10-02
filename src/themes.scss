@@ -6,24 +6,10 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
-@mixin set-theme-brand($theme) {
-	$accent-palette:  map-get($theme, accent);
-	.brand {
-		color: mat-color($accent-palette);
-		font-family: "Stardos Stencil";
-	}
-}
-
-
-@mixin set-theme($theme) {
-	@include angular-material-color($theme);
-	@include set-theme-brand($theme);
-}
-
-// closest to brand color available
-$brand-color: mat-palette($mat-orange, A700, 400, 900);
+$brand-color: mat-palette($mat-orange, A700, 700, 800);
 //  Available color palettes: https://material.io/design/color/
-$app-primary: mat-palette($mat-grey, 900, 800);
+$app-primary: mat-palette($mat-grey, 900, 700);
+$app-alt-primary: mat-palette($mat-grey, 600, 200, 800);
 $app-accent:	$brand-color;
 $app-warn:		mat-palette($mat-red);
 $app-theme: (
@@ -32,6 +18,48 @@ primary: $app-primary,
 accent: $app-accent,
 warn: $app-warn,
 ));
+
+@mixin set-theme-brand($theme) {
+	$accent-palette:  map-get($theme, accent);
+	.brand {
+		color: mat-color($accent-palette);
+		font-family: "Stardos Stencil";
+	}
+	.brand-lighter {
+		color: mat-color($accent-palette, lighter);
+	}
+}
+
+@mixin set-themed-hyperlink($theme) {
+	$primary-palette:  map-get($theme, foreground);
+	a.theme-link {
+			text-decoration: none;
+			color: mat-color($primary-palette, base);
+		}
+	a.theme-link:hover {
+			text-decoration: none;
+			color: mat-color($app-accent);
+	}
+}
+
+@mixin set-theme-contact-info($theme) {
+	$primary-palette:  map-get($theme, primary);
+	app-company-info {
+		background-color: mat-color($primary-palette, lighter);
+		// background-color: mat-color($app-alt-primary, darker);
+	}
+	app-employees {
+		background-color: mat-color($app-alt-primary, lighter);
+	}
+}
+
+@mixin set-theme($theme) {
+	@include angular-material-color($theme);
+	@include set-theme-brand($theme);
+	@include set-theme-contact-info($theme);
+	@include set-themed-hyperlink($theme);
+}
+
 
 .light-theme {
 	@include set-theme(mat-light-theme($app-theme));

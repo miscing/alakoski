@@ -1,0 +1,10 @@
+<h1 class="brand-lighter">Yhteystiedot</h1>
+<mat-list class="info">
+	<h3>{{ company.name }}</h3>
+	<mat-divider [inset]="true"></mat-divider>
+	<mat-list-item>
+		<a class="theme-link" href="mailto:{{ company.email }}">{{ company.email }}</a>
+	</mat-list-item>
+	<mat-list-item>{{ company.phone }}</mat-list-item>
+	<mat-list-item>{{ company.area }}</mat-list-item>
+</mat-list>

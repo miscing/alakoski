@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { ContactdetailsComponent } from './contactdetails/contactdetails.component';
+import { ContactInfoComponent } from './contact-info/contact-info.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
 	{ path: "",  redirectTo: '', pathMatch: 'full'},
 	{ path: "etusivu", component: HomeComponent , data: {animation: 'HomePage'} },
-	{ path: "yhteistiedot", component: ContactdetailsComponent, data: {animation: 'AboutPage'} },
+	{ path: "yhteystiedot", component: ContactInfoComponent, data: {animation: 'AboutPage'} },
 	{ path: "**", component: PagenotfoundComponent }
 ];
 
