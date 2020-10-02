@@ -19,14 +19,16 @@ import { slideInAnimation } from './animation';
 export class DashboardComponent implements OnInit {
 	@ViewChild('menudrawer') menudrawer : MatDrawer;
 	isHandHeld : Observable<boolean>;
+	// isHandHeld : Observable<BreakpointState>;
 
 	constructor(private breakpointObserver: BreakpointObserver) {}
 
 	ngOnInit(): void {
-		this.isHandHeld = this.breakpointObserver.observe(Breakpoints.Handset)
+		this.isHandHeld = this.breakpointObserver.observe(Breakpoints.Web)
 		.pipe(
-			map(result => result.matches)
+			map(result => !result.matches)
 		);
+		this.isHandHeld.subscribe( x => { console.log(x) } );
 	}
 
 	prepareRoute(outlet: RouterOutlet) {
