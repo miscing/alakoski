@@ -1,16 +1,6 @@
-@mixin column {
+:host {
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-}
-
-:host {
-	@include column;
-	min-height: 100%;
-}
-
-mat-card {
-	margin: 5vh 0 0 0;
-	width: 90%;
-	@include column;
+	height: 100%;
 }

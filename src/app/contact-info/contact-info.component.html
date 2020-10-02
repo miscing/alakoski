@@ -1,8 +1,2 @@
-<mat-card *ngIf="!(isHandHeld | async); else noCard">
-	<app-company-info [company]="aInfo.company"></app-company-info>
-	<app-employees [employees]="aInfo.employees"></app-employees>
-</mat-card>
-<ng-template #noCard>
-	<app-company-info [company]="aInfo.company"></app-company-info>
-	<app-employees [employees]="aInfo.employees"></app-employees>
-</ng-template>
+<app-company-info [company]="aInfo.company"></app-company-info>
+<app-employees [employees]="aInfo.employees"></app-employees>
