@@ -1,21 +1,23 @@
 :host {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
-	font-size: 4vh;
+	font-size: 4vh; // other component fonts based on this
+	margin: 7vh 0;
 }
 
-h1 {
-	margin: 7vh 3vw;
-	font-size: 2em;
+
+h3 {
+	text-transform: uppercase;
+	font-size: 1em;
+	font-family: "Stardos Stencil";
 }
+
 .info {
-	margin: 4vh 4vw;
-	h3 {
-		font-size: 1em;
-		font-family: "Stardos Stencil";
-	}
+	margin: 2vh 0 0 0;
+	justify-content: center;
 	mat-list-item {
 		margin: 2vh 0 0 0;
 		font-size: 0.8em;

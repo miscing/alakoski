@@ -44,9 +44,6 @@ warn: $app-warn,
 
 @mixin set-theme-contact-info($theme) {
 	$primary-palette:  map-get($theme, primary);
-	app-company-info {
-		background-color: mat-color($app-alt-primary, lighter);
-	}
 	app-employees {
 		background-color: mat-color($app-alt-primary);
 	}
