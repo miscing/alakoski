@@ -1,5 +1,5 @@
 <mat-nav-list>
-	<a mat-list-item *ngFor="let link of paths" routerLink="{{link}}">
+	<a mat-list-item  (click)="menuDrawer.close()" *ngFor="let link of paths" routerLink="{{link}}">
 		{{ capitalize(link) }}
 	</a>
 </mat-nav-list>
