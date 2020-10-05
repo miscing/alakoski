@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Input, Component, OnInit } from '@angular/core';
+
+import { MatDrawer } from '@angular/material/sidenav';
 
 import { AppRoutingModule } from '../../app-routing.module';
 
@@ -8,6 +10,8 @@ import { AppRoutingModule } from '../../app-routing.module';
   styleUrls: ['./handheld-menu.component.scss']
 })
 export class HandheldMenuComponent implements OnInit {
+	@Input() menuDrawer :MatDrawer;
+
 	paths :string[];
 
 	constructor(private appRoutingModule :AppRoutingModule) { }
