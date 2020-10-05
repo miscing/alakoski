@@ -1,4 +1,5 @@
-<mat-toolbar *ngIf="!(hide | async)" color="primary">
+<!-- <mat-toolbar *ngIf="!hide" color="primary"> -->
+<mat-toolbar *ngIf="hide ? false :true" color="primary">
 	<a mat-button *ngFor="let item of items" href="{{ item.link }}">
 		<img class="item" alt="{{ item.name }}" src="{{ item.img }}">
 	</a>

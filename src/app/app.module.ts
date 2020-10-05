@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ScrollingModule } from '@angular/cdk/scrolling';
-
 import { AppComponent } from './app.component';
 import { ToolbarsModule } from './toolbars/toolbars.module';
 import { ContactInfoModule } from './contact-info/contact-info.module';
@@ -18,7 +16,6 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 	],
 	imports: [
 		ContactInfoModule,
-		ScrollingModule,
 		ToolbarsModule,
 		BrowserModule,
 		BrowserAnimationsModule

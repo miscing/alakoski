@@ -19,7 +19,6 @@ import { slideInAnimation } from './animation';
 export class DashboardComponent implements OnInit {
 	@ViewChild('menudrawer') menudrawer : MatDrawer;
 	isHandHeld : Observable<boolean>;
-	// isHandHeld : Observable<BreakpointState>;
 
 	constructor(private breakpointObserver: BreakpointObserver) {}
 
