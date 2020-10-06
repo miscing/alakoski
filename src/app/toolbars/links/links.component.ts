@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import itemsJson from './items.json';
 import { Item } from '../item';
@@ -8,13 +8,8 @@ import { Item } from '../item';
   templateUrl: './links.component.html',
   styleUrls: ['./links.component.scss']
 })
-export class LinksComponent implements OnInit {
-
+export class LinksComponent {
 	items : Item[] = itemsJson;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

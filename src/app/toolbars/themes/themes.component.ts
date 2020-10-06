@@ -4,6 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 
 import { ThemesService } from '../../themes.service';
 
+
 @Component({
 	selector: 'app-themes',
 	templateUrl: './themes.component.html',

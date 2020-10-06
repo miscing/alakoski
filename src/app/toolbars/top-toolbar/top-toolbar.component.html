@@ -10,5 +10,4 @@
 	<a mat-button [class.hand-held]="isHandHeld" routerLink="etusivu"><h1 class="brand">{{ companyName.toUpperCase() }}</h1></a>
 	<span *ngIf="!isHandHeld" class="spacer"></span>
 	<app-links *ngIf="!isHandHeld" ></app-links>
-	<app-themes *ngIf="!isHandHeld"></app-themes>
 </mat-toolbar>
