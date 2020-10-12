@@ -16,8 +16,8 @@ pages:
   artifacts:
     paths:
       - public
-  only:
-    - master
+  # only:
+    # - master
   except:
     changes:
       - README.md
