@@ -31,7 +31,7 @@ export class BottomToolbarComponent implements AfterViewInit {
 				if ( cdk ) {
 					let offset = cdk.measureScrollOffset("top");
 					console.log(offset);
-					if ( Math.abs(this.oldOffset - offset) > 5 ) {
+					if ( Math.abs(this.oldOffset - offset) < 15 ) {
 						console.log("triggered");
 						if (offset > triggerDiff && offset > this.oldOffset) {
 							if (!this.hide) {
@@ -44,8 +44,8 @@ export class BottomToolbarComponent implements AfterViewInit {
 								this.cdRef.detectChanges();
 							}
 						}
-						this.oldOffset = offset;
 					}
+					this.oldOffset = offset;
 				}
 		});
 	}
