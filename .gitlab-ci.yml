@@ -4,9 +4,6 @@ cache:
   paths:
     - node_modules/
 
-before_script:
-  # - npm install ng -g
-
 pages:
   stage: build
   tags:
@@ -22,5 +19,5 @@ pages:
     paths:
       - public
     expire_in: 3 days
-  # only:
-  #   - master
+  only:
+    - master
