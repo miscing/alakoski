@@ -7,12 +7,9 @@ pages:
     - yarn install
     - ng build --prod --output-path public
     - cp public/index.html public/404.html
-    - ls
-    - ls public
   cache:
     paths:
       - node_modules/
-      - public/
   artifacts:
     paths:
       - public
