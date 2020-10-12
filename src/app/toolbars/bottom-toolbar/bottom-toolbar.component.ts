@@ -30,7 +30,9 @@ export class BottomToolbarComponent implements AfterViewInit {
 		this.scrollDispatcher.scrolled().subscribe( (cdk: CdkScrollable) => {
 				if ( cdk ) {
 					let offset = cdk.measureScrollOffset("top");
+					console.log(offset);
 					if ( Math.abs(this.oldOffset - offset) > 5 ) {
+						console.log("triggered");
 						if (offset > triggerDiff && offset > this.oldOffset) {
 							if (!this.hide) {
 								this.hide = true;
