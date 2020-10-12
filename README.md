@@ -5,3 +5,8 @@
 Landing website for Saneeraus Alakoski Oy.
 
 Framework: Angular
+
+## Features:
+### TODO:
+ - SSR (server side rendering)
+ - GDPR compliant Analytics

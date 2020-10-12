@@ -1,23 +1,26 @@
+image: docker.io/library/node
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  # - npm install ng -g
+
 pages:
   stage: build
-  image: docker.io/teracy/angular-cli
   tags:
     - docker
   script:
-    - yarn install
-    - ng build --prod --output-path public
+    - npm install
+    - ./node_modules/@angular/cli/bin/ng build --prod --output-path public
+      # Simulates fallthrough. See:
+      # https://angular.io/guide/deployment#routed-apps-must-fallback-to-indexhtml
+      # https://angular.io/guide/deployment#deploy-to-github-pages
     - cp public/index.html public/404.html
-    - ls
-    - ls public
-  cache:
-    paths:
-      - node_modules/
-      - public/
   artifacts:
     paths:
       - public
-  only:
-    - master
-  except:
-    changes:
-      - README.md
+    expire_in: 3 days
+  # only:
+  #   - master
