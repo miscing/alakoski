@@ -18,6 +18,15 @@ pages:
   artifacts:
     paths:
       - public
-    expire_in: 3 days
+    expire_in: 1 days
   only:
     - master
+  except:
+    - schedules
+
+
+update:
+  script:
+    - ./node_modules/@angular/cli/bin/ng update --all
+  only:
+    - schedules
