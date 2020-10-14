@@ -5,7 +5,7 @@ cache:
     - node_modules/
 
 pages:
-  stage: build
+  stage: deploy
   tags:
     - docker
   script:
@@ -23,7 +23,6 @@ pages:
     - master
   except:
     - schedules
-
 
 update:
   script:
