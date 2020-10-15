@@ -2,8 +2,10 @@
 	<div class="content">
 		<mat-card-title>{{ e.firstName + " " + e.surName }}</mat-card-title>
 		<mat-card-subtitle>{{ e.title }}</mat-card-subtitle>
-		<p >{{ e.phone }}</p>
-		<p >{{ e.email }}</p>
+		<mat-card-content>
+			<p >{{ e.phone }}</p>
+			<p >{{ e.email }}</p>
+		</mat-card-content>
 	</div>
-	<img alt="" src="{{ e.pic }}">
+	<img alt="profile pic" src="{{ e.pic }}">
 </mat-card>

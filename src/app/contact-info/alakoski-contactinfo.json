@@ -1,16 +1,16 @@
 {
 	"company" : {
 		"name" : "Saneeraus Alakoski Oy",
-		"phone" : "044-0807771",
-		"email" : "sales@alakoski.fi",
+		"phone" : "(+358) 044-080-777-1",
+		"email" : "alakoski@alakoski.fi",
 		"area" : "Tuusula"
 	},
 	"employees" : [
 		{
 			"title": "Toimitusjohtaja",
-			"firstName": "Mape",
+			"firstName": "Martti",
 			"surName" : "Alakoski",
-			"phone" : "044-0807771",
+			"phone" : "(+358) 044-080-777-1",
 			"email" : "alakoski@alakoski.fi",
 			"pic" : "assets/employees/mape_alakoski.png"
 		}

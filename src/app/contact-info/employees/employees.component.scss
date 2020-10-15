@@ -9,11 +9,13 @@
 .employee {
 	margin: 6vh 5vw;
 	display: flex;
-	height: 20vh;
+	$mrgin: 2vh 2vw;
 	.content {
-		margin: 2vh 3vw;
+		margin: $mrgin;
 	}
 	img {
-		height: 100%;
+		margin: $mrgin;
+		height: 130px;
+		width: auto;
 	}
 }
