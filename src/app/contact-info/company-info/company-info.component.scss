@@ -5,21 +5,27 @@
 	align-items: center;
 	width: 100%;
 	font-size: 4vh; // other component fonts based on this
-	height: 100%;
+	margin: 8vh 0;
 }
 
 
-h3 {
+.company-name {
 	text-transform: uppercase;
 	font-size: 1em;
 	font-family: "Stardos Stencil";
+	text-align: center; // to display correctly when wrapping
+	line-height: 1.2;
 }
 
 .info {
-	margin: 2vh 0 0 0;
 	justify-content: center;
+
+	mat-divider {
+		margin: 3vh 0;
+	}
+
 	mat-list-item {
-		margin: 2vh 0 0 0;
+		margin: 10px 0;
 		font-size: 0.8em;
 		height: auto;
 	}
