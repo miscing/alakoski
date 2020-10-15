@@ -21,11 +21,12 @@
 	justify-content: center;
 
 	mat-divider {
-		margin: 3vh 0;
+		padding: 1vh 0; // for some reason paddin affects below
+		margin: 2vh 0; // and margin ontop of divider. Don't know why
 	}
 
 	mat-list-item {
-		margin: 10px 0;
+		margin: 2vh 0;
 		font-size: 0.8em;
 		height: auto;
 	}
