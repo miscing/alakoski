@@ -12,17 +12,21 @@ export class ThemesService {
 	private bs :BehaviorSubject<string>;
 
 	constructor() {
-		this.theme = themes[0]; //default theme TODO: read cookie for old theme
+		let theme = window.localStorage.getItem("theme");
+		if ( theme == themes[0] || theme == themes[1] ) {
+			this.theme = theme;
+		} else {
+			window.localStorage.setItem("theme", themes[0]);
+			this.theme = themes[0];
+		}
 		this.bs = new BehaviorSubject<string>(this.theme);
 	}
 
 	toggle() {
 		if (this.theme == themes[0]) {
-			this.theme = themes[1];
-			this.bs.next(themes[1]);
+			this.setTheme(themes[1]);
 		} else {
-			this.theme = themes[0];
-			this.bs.next(themes[0]);
+			this.setTheme(themes[0]);
 		}
 	}
 
@@ -33,5 +37,11 @@ export class ThemesService {
 	// Returns an observable that triggers on theme change sending the theme class
 	getTheme() :Observable<string> {
 		return this.bs;
+	}
+
+	setTheme(theme :string) {
+		this.theme = theme;
+		this.bs.next(theme);
+		window.localStorage.setItem("theme", theme);
 	}
 }
