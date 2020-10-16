@@ -15,4 +15,8 @@ export class CompanyInfoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+	formatPNumber(phone :string) :string{
+		return phone.split("-").join(" ")
+	}
+
 }

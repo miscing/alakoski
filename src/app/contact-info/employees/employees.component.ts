@@ -12,4 +12,8 @@ export class EmployeesComponent {
 
   constructor() { }
 
+	formatPNumber(phone :string) :string{
+		return phone.split("-").join(" ")
+	}
+
 }

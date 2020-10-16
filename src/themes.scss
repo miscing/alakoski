@@ -32,11 +32,11 @@ warn: $app-warn,
 
 @mixin set-themed-hyperlink($theme) {
 	$primary-palette:  map-get($theme, foreground);
-	a.theme-link {
+	a {
 		text-decoration: none;
 		color: mat-color($primary-palette, base);
 	}
-	a.theme-link:hover {
+	a:hover {
 		text-decoration: none;
 		color: mat-color($app-accent);
 	}

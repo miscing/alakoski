@@ -2,8 +2,8 @@
 <mat-list class="info">
 	<mat-divider></mat-divider>
 	<mat-list-item>
-		<a class="theme-link" href="mailto:{{ company.email }}">{{ company.email }}</a>
+		<a href="mailto:{{ company.email }}">{{ company.email }}</a>
 	</mat-list-item>
-	<mat-list-item>{{ company.phone }}</mat-list-item>
+	<mat-list-item><a href="tel:{{ company.phone }}">{{ formatPNumber(company.phone) }}</a></mat-list-item>
 	<mat-list-item>{{ company.area }}</mat-list-item>
 </mat-list>
