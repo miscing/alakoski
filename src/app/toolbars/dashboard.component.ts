@@ -19,6 +19,7 @@ import { slideInAnimation } from './animation';
 export class DashboardComponent implements OnInit {
 	@ViewChild('menudrawer') menudrawer : MatDrawer;
 	isHandHeld : Observable<boolean>;
+	menuOpen :boolean;
 
 	constructor(private breakpointObserver: BreakpointObserver) {}
 
@@ -29,6 +30,17 @@ export class DashboardComponent implements OnInit {
 		.pipe(
 			map(result => result.matches)
 		);
+
+		// close menu if layout changes
+		this.isHandHeld.subscribe( handHeld => {
+			if (this.menuOpen && !handHeld) {
+				this.menudrawer.close();
+			}
+		});
+	}
+
+	setMenuOpened(opened :boolean) {
+		this.menuOpen = opened;
 	}
 
 	prepareRoute(outlet: RouterOutlet) {
