@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { ThemesService } from '../../themes.service';
 
@@ -11,25 +11,16 @@ import { ThemesService } from '../../themes.service';
 	styleUrls: ['./themes.component.scss']
 })
 export class ThemesComponent implements OnInit {
-	light :BehaviorSubject<boolean>;
-	private currentValue :boolean;
+	theme :Observable<string>;
 
 	constructor(private themesService :ThemesService) {
 	}
 
 	ngOnInit(): void {
-		if (this.themesService.currentTheme() == "light") {
-			this.light = new BehaviorSubject<boolean>(true);
-			this.currentValue = true;
-		} else {
-			this.light = new BehaviorSubject<boolean>(false);
-			this.currentValue = false;
-		}
+		this.theme = this.themesService.getTheme();
 	}
 
 	toggle() :void {
-		this.currentValue = !this.currentValue;
-		this.light.next(this.currentValue);
 		this.themesService.toggle();
 	}
 }
