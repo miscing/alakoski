@@ -2,7 +2,7 @@ import { ViewChild, Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { MatDrawer } from '@angular/material/sidenav';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -23,9 +23,11 @@ export class DashboardComponent implements OnInit {
 	constructor(private breakpointObserver: BreakpointObserver) {}
 
 	ngOnInit(): void {
-		this.isHandHeld = this.breakpointObserver.observe(Breakpoints.Web)
+		this.isHandHeld = this.breakpointObserver.observe(
+			'(max-width: 1200px)'
+		)
 		.pipe(
-			map(result => !result.matches)
+			map(result => result.matches)
 		);
 	}
 
