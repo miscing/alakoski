@@ -1,8 +1,8 @@
 image: docker.io/library/node
 
-cache:
-  paths:
-    - node_modules/
+# cache:
+#   paths:
+#     - node_modules/
 
 variables:
   GIT_STRATEGY: clone
@@ -37,9 +37,9 @@ update:
     # - npm update
     - echo "change" >> ./README.md
     - |
-      if [[ -n "$(git status -s)" ]]; then
+      "if [[ -n '$(git status -s)' ]]; then
         git commit -a -m 'updated dependencies'
         git push -u origin 21-update-job-enhancement < $GIT_TOKEN
-      fi
+      fi"
   only:
     - schedules
