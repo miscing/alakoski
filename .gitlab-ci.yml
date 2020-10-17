@@ -31,13 +31,15 @@ update:
   tags:
     - docker
   script:
+    - git config --global user.email "bot_miscing@protonmail.com"
+    - git config --global user.name "bot_miscing"
     - git checkout -b update
     - git remote set-url origin https://$TOKEN:gitlab.com/miscing/alakoski.git
     - echo "change" >> ./README.md
     - |
-        if [[ -n '$(git status -s)' ]]; then
-          git commit -a -m 'updated dependencies'
-          git push -u origin update
-        fi
+      if [[ -n '$(git status -s)' ]]; then
+        git commit -a -m 'updated dependencies'
+        git push -u origin update
+      fi
   only:
     - schedules
