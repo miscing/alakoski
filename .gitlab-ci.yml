@@ -26,6 +26,9 @@ pages:
 
 update:
   script:
-    - ./node_modules/@angular/cli/bin/ng update --all
+    - git checkout -b update
+    - npm update
+    - git commit -a -m 'updated dependencies'
+    - git push -u origin update
   only:
     - schedules
