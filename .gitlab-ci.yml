@@ -32,6 +32,7 @@ update:
     - docker
   script:
     - git checkout -b update
+    - mkdir ~/.ssh
     - cp $priv ~/.ssh/id_rsa
     - chmod 700 ~/.ssh/id_rsa
     - cp $pub ~/.ssh/id_rsa.pub
