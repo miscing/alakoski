@@ -32,14 +32,7 @@ update:
     - docker
   script:
     - git checkout -b update
-    - mkdir ~/.ssh
-    - cp $priv ~/.ssh/id_rsa
-    - chmod 700 ~/.ssh/id_rsa
-    - cp $pub ~/.ssh/id_rsa.pub
-    - git remote set-url origin git@gitlab.com:miscing/alakoski.git
-    - git config user.email $GITLAB_USER_EMAIL
-    - git config user.name $GITLAB_USER_NAME
-    # - npm update
+    - git remote set-url origin https://$TOKEN:gitlab.com/miscing/alakoski.git
     - echo "change" >> ./README.md
     - |
         if [[ -n '$(git status -s)' ]]; then
