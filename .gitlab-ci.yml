@@ -25,10 +25,12 @@ pages:
     - schedules
 
 update:
+  tags:
+    - docker
   script:
     - git checkout -b update
     - npm update
     - git commit -a -m 'updated dependencies'
     - git push -u origin update
-  only:
-    - schedules
+  # only:
+  #   - schedules
