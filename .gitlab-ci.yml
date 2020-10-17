@@ -29,13 +29,9 @@ update:
     - docker
   script:
     - git checkout -b update
-    - npm update
     - git config user.email $GITLAB_USER_EMAIL
     - git config user.name $GITLAB_USER_NAME
-    - echo $GITLAB_USER_NAME
-    - echo $GITLAB_USER_EMAIL
-    - git remote -v
-    - git commit -a -m 'updated dependencies'
-    - git push -u origin update < $GIT_TOKEN
+    - npm update
+    - if [[ -n "$(git status -s)" ]]; then git commit -a -m 'updated dependencies'; git push -u origin update < $GIT_TOKEN fi
   only:
     - schedules
