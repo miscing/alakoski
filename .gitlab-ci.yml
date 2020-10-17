@@ -40,7 +40,7 @@ update:
         if [[ -n '$(git status -s)' ]]; then
           echo $GIT_TOKEN
           git commit -a -m 'updated dependencies'
-          cat $GIT_TOKEN | git push -u origin 21-update-job-enhancement
+          cat $GIT_TOKEN | git push -u origin update
         fi
   only:
     - schedules
