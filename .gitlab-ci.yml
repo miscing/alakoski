@@ -32,9 +32,9 @@ update:
     - docker
   script:
     - git checkout -b update
-    - cp id_rsa ~/.ssh/id_rsa
+    - cp $priv ~/.ssh/id_rsa
     - chmod 700 ~/.ssh/id_rsa
-    - cp id_rsa.pub ~/.ssh/id_rsa.pub
+    - cp $pub ~/.ssh/id_rsa.pub
     - git config user.email $GITLAB_USER_EMAIL
     - git config user.name $GITLAB_USER_NAME
     # - npm update
