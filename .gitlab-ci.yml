@@ -1,8 +1,8 @@
 image: docker.io/library/node
 
-# cache:
-#   paths:
-#     - node_modules/
+cache:
+  paths:
+    - node_modules/
 
 variables:
   GIT_STRATEGY: clone
@@ -28,6 +28,7 @@ pages:
     - schedules
 
 update:
+  cache: {}
   tags:
     - docker
   script:
