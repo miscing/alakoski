@@ -35,7 +35,7 @@ update:
     - git config --global user.name "bot_miscing"
     - git checkout -b update
     - git remote set-url origin https://bot_miscing:$TOKEN@gitlab.com/miscing/alakoski.git
-    - echo "change" >> ./README.md
+    - npm update
     - |
       if [[ -n '$(git status -s)' ]]; then
         git commit -a -m 'updated dependencies'
