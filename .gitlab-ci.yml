@@ -35,7 +35,7 @@ update:
     - git config user.email $GITLAB_USER_EMAIL
     - git config user.name $GITLAB_USER_NAME
     - npm update
-    - |
+    - ->
         if [ -n "$(git status -s)" ]; then
           git commit -a -m 'updated dependencies'
           git push -u origin update < $GIT_TOKEN
