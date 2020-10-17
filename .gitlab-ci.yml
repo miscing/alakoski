@@ -37,9 +37,9 @@ update:
     # - npm update
     - echo "change" >> ./README.md
     - |
-      "if [[ -n '$(git status -s)' ]]; then
-        git commit -a -m 'updated dependencies'
-        git push -u origin 21-update-job-enhancement < $GIT_TOKEN
-      fi"
+        if [[ -n '$(git status -s)' ]]; then
+          git commit -a -m 'updated dependencies'
+          git push -u origin 21-update-job-enhancement < $GIT_TOKEN
+        fi
   only:
     - schedules
