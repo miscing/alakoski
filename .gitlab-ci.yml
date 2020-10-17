@@ -36,9 +36,6 @@ update:
     - git config user.name $GITLAB_USER_NAME
     # - npm update
     - echo "change" >> ./README.md
-    - echo $GIT_TOKEN
-    - cat $GIT_TOKEN
-    - cat GIT_TOKEN
     - |
         if [[ -n '$(git status -s)' ]]; then
           git commit -a -m 'updated dependencies'
