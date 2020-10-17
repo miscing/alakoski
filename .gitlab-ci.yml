@@ -30,6 +30,8 @@ update:
   script:
     - git checkout -b update
     - npm update
+    - git config user.email $GITLAB_USER_EMAIL
+    - git config user.name $GITLAB_USER_NAME
     - git commit -a -m 'updated dependencies'
     - git push -u origin update
   # only:
