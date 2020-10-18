@@ -31,6 +31,7 @@ update:
   cache: {}
   tags:
     - docker
+    - owned
   script:
     - git config --global user.email "bot_miscing@protonmail.com"
     - git config --global user.name "bot_miscing"
