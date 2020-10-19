@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+
+import homeRaw from './home.json';
+import { Home } from './home';
 
 @Component({
 	selector: 'app-home',
@@ -11,17 +14,26 @@ import { map } from 'rxjs/operators';
 })
 
 export class HomeComponent implements OnInit {
-	isHandHeld: Observable<boolean>;
+	home: Home = homeRaw;
+	isHandHeld :Observable<boolean>;
+	topToolbarShort :Observable<boolean>;
+	postpost :string;
 
-	motto = `Rakennustyöt lattiasta kattoon.`
-	content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum`
-
-	constructor(private breakpointObserver: BreakpointObserver) {}
+	constructor(private breakpointObserver :BreakpointObserver) {}
 
 	ngOnInit(): void {
-		this.isHandHeld = this.breakpointObserver.observe(Breakpoints.Handset)
-		.pipe(
-			map(result => result.matches)
+		this.isHandHeld = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
+			map( breakpoinstState => breakpoinstState.matches )
 		);
+		this.topToolbarShort = this.breakpointObserver.observe('(max-width: 1200px)').pipe(
+			map( breakpoinstState => breakpoinstState.matches )
+		);
+		this.topToolbarShort.subscribe( short => {
+			if (short) {
+				this.postpost = this.home.post[1];
+			} else {
+				this.postpost = this.home.post[2];
+			}
+		});
 	}
 }

@@ -1,0 +1,30 @@
+{
+	"motto": {
+		"txt": "Rakennustyöt pohjasta pintaan",
+		"img": "assets/alakoski_boat.jpg"
+	},
+	"content": [
+		"Olemme ammattimainen ja lämminhenkinen yritys, joka tarjoaa yksilöllistä palvelua asiakkaan tarpeet huomioon ottaen. Olemme toimineet pääkaupunkiseudulla vuodesta 2004.",
+		"Teemme remontit ja saneeraukset ammattimaisesti ja yksilöllisesti. Hoidamme asiantuntevasti kaikenlaiset työt pintojen asennuksista tilojen kokonaisvaltaisiin kunnostuksiin: kaikki lattiapinnoista asuinhuoneistojen ja kylpyhuoneiden remontteihin.",
+		"Ota meihin yhteyttä “Yhteystiedot” sivun kautta!"
+	],
+	"examples": [
+		{
+			"txt": "Tapetointityöt ja tiskien maalaustyöt",
+			"img": "assets/alakoski_bar.jpg"
+		},
+		{
+			"txt": "Sauna ja kylpyhuone remontit",
+			"img": "assets/alakoski_sauna_portrait.jpg"
+		},
+		{
+			"txt": "Lattiapintojen kunnostus",
+			"img": "assets/alakoski_floors_orig.jpg"
+		}
+	],
+	"post": [
+		"Lisää referenssejä löytyy meidän Instagram ja Facebook sivuilta.",
+		"Linkit löytyy valikosta vasemmassa ylälaidassa.",
+		"Linkit löytyy oikealta ylälaidalta."
+	]
+}
