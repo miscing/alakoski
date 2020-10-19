@@ -1,7 +1,17 @@
-<div class="main-container" [class]="(isHandHeld | async) ? 'handheld' : 'desktop'">
-	<div>
-		<h2>{{motto}}</h2>
-		<p>{{content}}</p>
+<div class="centered">
+	<h2>{{home.motto.txt}}</h2>
+	<img alt="alakoski saneeraus harbor cool" src="{{home.motto.img}}">
+	<span class="content" *ngFor="let c of home.content">{{c}}</span>
+	<div *ngFor="let txtimg of home.examples; index as i">
+		<div *ngIf="!(isHandHeld | async)" class="example" [class.even]="(i%2) == 0">
+			<img src="{{txtimg.img}}">
+			<h1>{{txtimg.txt}}</h1>
+		</div>
+		<div *ngIf="(isHandHeld | async)" class="example handheld">
+			<img src="{{txtimg.img}}">
+			<h1>{{txtimg.txt}}</h1>
+		</div>
 	</div>
-	<img alt="alakoski saneeraus harbor cool" src="assets/alakoski_boat.jpg">
+	<h3 class="post">{{home.post[0]}}</h3>
+	<h3 class="post">{{ postpost }}</h3>
 </div>
