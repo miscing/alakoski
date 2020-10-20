@@ -12,7 +12,7 @@ pages:
   tags:
     - docker
   script:
-    - npm install
+    - npm install --only=prod
     - ./node_modules/@angular/cli/bin/ng build --prod --output-path public
       # Simulates fallthrough. See:
       # https://angular.io/guide/deployment#routed-apps-must-fallback-to-indexhtml
