@@ -27,7 +27,6 @@ pages:
     expire_in: 1 days
   only:
     - master
-    - cicd
   except:
     - schedules
 
