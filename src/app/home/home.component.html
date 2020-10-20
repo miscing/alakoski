@@ -1,14 +1,14 @@
 <div class="centered">
 	<h2>{{home.motto.txt}}</h2>
-	<img alt="alakoski saneeraus harbor cool" src="{{home.motto.img}}">
+	<img alt="{{home.motto.alt}}" src="{{home.motto.img}}">
 	<span class="content" *ngFor="let c of home.content">{{c}}</span>
 	<div *ngFor="let txtimg of home.examples; index as i">
 		<div *ngIf="!(isHandHeld | async)" class="example" [class.even]="(i%2) == 0">
-			<img src="{{txtimg.img}}">
+			<img alt="{{txtimg.alt}}" src="{{txtimg.img}}">
 			<h1>{{txtimg.txt}}</h1>
 		</div>
 		<div *ngIf="(isHandHeld | async)" class="example handheld">
-			<img src="{{txtimg.img}}">
+			<img alt="{{txtimg.alt}}" src="{{txtimg.img}}">
 			<h1>{{txtimg.txt}}</h1>
 		</div>
 	</div>

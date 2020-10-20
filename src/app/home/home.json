@@ -1,6 +1,7 @@
 {
 	"motto": {
 		"txt": "Rakennustyöt pohjasta pintaan",
+		"alt": "saneeraus alakoski",
 		"img": "assets/alakoski_boat.jpg"
 	},
 	"content": [
@@ -11,15 +12,18 @@
 	"examples": [
 		{
 			"txt": "Tapetointityöt ja tiskien maalaustyöt",
+			"alt": "tapetointi maalaus baari",
 			"img": "assets/alakoski_bar.jpg"
 		},
 		{
 			"txt": "Sauna ja kylpyhuone remontit",
+			"alt": "sauna kylpyhuone remontti",
 			"img": "assets/alakoski_sauna_portrait.jpg"
 		},
 		{
 			"txt": "Lattiapintojen kunnostus",
-			"img": "assets/alakoski_floors_orig.jpg"
+			"alt": "lattia pinnoitus kunnostus",
+			"img": "assets/alakoski_floors.jpg"
 		}
 	],
 	"post": [
