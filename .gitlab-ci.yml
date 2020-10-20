@@ -12,7 +12,10 @@ pages:
   tags:
     - docker
   script:
-    - npm install --only=prod
+    - |
+      if [[ -n $(npm install --only=prod | grep -P -e "found \d* high severity vulnerability") ]] ; then
+        if npm audit fix; then exit 2; fi
+      fi
     - ./node_modules/@angular/cli/bin/ng build --prod --output-path public
       # Simulates fallthrough. See:
       # https://angular.io/guide/deployment#routed-apps-must-fallback-to-indexhtml
@@ -24,6 +27,7 @@ pages:
     expire_in: 1 days
   only:
     - master
+    - cicd
   except:
     - schedules
 
