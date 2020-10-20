@@ -7,5 +7,6 @@ export interface Home {
 
 export interface TxtImg {
 	txt :string;
+	alt :string;
 	img :string;
 }
