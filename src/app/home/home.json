@@ -6,7 +6,7 @@
 	},
 	"content": [
 		"Olemme ammattimainen ja lämminhenkinen yritys, joka tarjoaa yksilöllistä palvelua asiakkaan tarpeet huomioon ottaen. Olemme toimineet pääkaupunkiseudulla vuodesta 2004.",
-		"Teemme remontit ja saneeraukset ammattimaisesti ja yksilöllisesti. Hoidamme asiantuntevasti kaikenlaiset työt: pintojen asennukset, tilojen kokonaisvaltainen kunnostus sekä asuinhuoneistojen ja kylpyhuoneiden remontointi.",
+		"Teemme remontit ja saneeraukset ammattimaisesti ja yksilöllisesti. Hoidamme asiantuntevasti kaikenlaiset työt: pintojen asennukset, tilojen kokonaisvaltaiset kunnostukset sekä asuinhuoneistojen ja kylpyhuoneiden remontit.",
 		"Ota meihin yhteyttä “Yhteystiedot” sivun kautta!"
 	],
 	"examples": [
@@ -16,18 +16,18 @@
 			"img": "assets/alakoski_bar.jpg"
 		},
 		{
-			"txt": "Sauna ja kylpyhuone remontit",
+			"txt": "Sauna- ja kylpyhuoneremontit",
 			"alt": "sauna kylpyhuone remontti",
 			"img": "assets/alakoski_sauna_portrait.jpg"
 		},
 		{
-			"txt": "Lattiapintojen kunnostus",
+			"txt": "Lattiapintojen kunnostukset",
 			"alt": "lattia pinnoitus kunnostus",
 			"img": "assets/alakoski_floors.jpg"
 		}
 	],
 	"post": [
-		"Lisää referenssejä löytyy meidän Instagram ja Facebook sivuilta.",
+		"Lisää referenssejä löytyy meidän Instagram ja Facebook-sivuiltamme.",
 		"Linkit löytyy valikosta vasemmassa ylälaidassa.",
 		"Linkit löytyy oikealta ylälaidalta."
 	]
