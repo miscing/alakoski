@@ -1,7 +1,12 @@
 [
 	{
-		"name": "",
-		"link":"",
-		"img": ""
+		"name": "yhteistyö compass groups",
+		"link": "http://www.compass-group.fi/",
+		"img": "assets/collaborators/compassgroup_logo.png"
+	},
+	{
+		"name": "yhteistyö helsingin satama",
+		"link": "https://portofhelsinki.fi",
+		"img": "assets/collaborators/portofhelsinki_logo.jpg"
 	}
 ]
