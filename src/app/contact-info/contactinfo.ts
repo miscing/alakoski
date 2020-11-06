@@ -8,6 +8,7 @@ export interface CompanyInfo {
 	phone :string;
 	email :string;
 	area :string;
+	ytunnus :string;
 }
 
 export interface Employee {
