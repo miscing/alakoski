@@ -2,6 +2,7 @@
 	<h2>{{home.motto.txt}}</h2>
 	<img alt="{{home.motto.alt}}" src="{{home.motto.img}}">
 	<span class="content" *ngFor="let c of home.content">{{c}}</span>
+	<div class="space"></div>
 	<div *ngFor="let txtimg of home.examples; index as i">
 		<div *ngIf="!(isHandHeld | async)" class="example" [class.even]="(i%2) == 0">
 			<img alt="{{txtimg.alt}}" src="{{txtimg.img}}">
