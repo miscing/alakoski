@@ -4,6 +4,11 @@
 	<mat-list-item>
 		<a href="mailto:{{ company.email }}">{{ company.email }}</a>
 	</mat-list-item>
-	<mat-list-item><a href="tel:{{ company.phone }}">{{ formatPNumber(company.phone) }}</a></mat-list-item>
-	<mat-list-item>{{ company.area }}</mat-list-item>
+	<mat-list-item>
+		<a href="tel:{{ company.phone }}">{{ formatPNumber(company.phone) }}</a>
+	</mat-list-item>
+	<mat-list-item>
+		Y-tunnus: {{ company.ytunnus }}
+	</mat-list-item>
+	<!-- <mat-list-item>{{ company.area }}</mat-list-item> -->
 </mat-list>
