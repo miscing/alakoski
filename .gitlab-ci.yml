@@ -17,6 +17,10 @@ pages:
         if ! npm audit fix --production; then exit 2; fi
       fi
     - npm install @angular/cli
+      # this should not be required, npm 7.0.8 seems to have a bug
+      # that causes it to install binaries with insufficient permissions
+    - chmod 700 ./node_modules/@angular/cli/bin/ng
+      # TODO: delete row above when upstream resolves issue
     - ./node_modules/@angular/cli/bin/ng build --prod --output-path public
       # Simulates fallthrough. See:
       # https://angular.io/guide/deployment#routed-apps-must-fallback-to-indexhtml
