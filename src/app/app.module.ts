@@ -7,6 +7,7 @@ import { ToolbarsModule } from './toolbars/toolbars.module';
 import { ContactInfoModule } from './contact-info/contact-info.module';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
 	declarations: [
@@ -18,6 +19,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 		ContactInfoModule,
 		ToolbarsModule,
 		BrowserModule,
+		AppRoutingModule,
 		BrowserAnimationsModule
 	],
 	providers: [],
