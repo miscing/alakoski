@@ -1,4 +1,9 @@
 [
+	{ 
+		"name": "WhatsApp",
+		"link":"https://wa.me/+358440807771",
+		"img": "assets/logos/WhatsApp_Logo.png"
+	},
 	{
 		"name": "Instagram",
 		"link":"https://www.instagram.com/saneerausalakoskioy",
@@ -8,10 +13,5 @@
 		"name": "Facebook",
 		"link":"https://www.facebook.com/Saneeraus-Alakoski-Oy-1879971592051678",
 		"img": "assets/logos/Facebook_Logo.png"
-	},
-	{ 
-		"name": "WhatsApp",
-		"link":"https://wa.me/+358440807771",
-		"img": "assets/logos/WhatsApp_Logo.png"
 	}
 ]

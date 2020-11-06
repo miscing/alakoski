@@ -1,4 +1,7 @@
 <mat-toolbar class="bg">
+	<a mat-button href="mailto:{{aInfo.company.email}}" target="_blank" rel="noopener noreferrer">
+		<mat-icon>email</mat-icon>
+	</a>
 	<a mat-button target="_blank" rel="noopener noreferrer" *ngFor="let item of items" href="{{ item.link }}">
 		<img class="item" alt="{{ item.name }}" src="{{ item.img }}">
 	</a>

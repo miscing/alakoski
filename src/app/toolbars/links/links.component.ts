@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { ContactInfo } from "../../contact-info/contactinfo";
+import alakoskiCI from '../../contact-info/alakoski-contactinfo.json';
+
 import itemsJson from './items.json';
 import { Item } from '../item';
 
@@ -9,6 +12,7 @@ import { Item } from '../item';
   styleUrls: ['./links.component.scss']
 })
 export class LinksComponent {
+	aInfo :ContactInfo = alakoskiCI;
 	items : Item[] = itemsJson;
 
   constructor() { }
