@@ -1,12 +1,11 @@
 import { OnInit, Component } from '@angular/core';
 
 import { BreakpointState, BreakpointObserver } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
+import { BehaviorSubject } from 'rxjs';
 
 import { ContactInfo } from "../../contact-info/contactinfo";
 import alakoskiCI from '../../contact-info/alakoski-contactinfo.json';
+import { ThemesService } from "../../themes.service";
 
 import itemsJson from './items.json';
 import { Item } from '../item';
@@ -16,28 +15,50 @@ import { Item } from '../item';
 	templateUrl: './links.component.html',
 	styleUrls: ['./links.component.scss']
 })
-export class LinksComponent {
+export class LinksComponent implements OnInit{
 	aInfo :ContactInfo = alakoskiCI;
 	items : Item[] = itemsJson;
-	color :Observable<string>;
+	color :BehaviorSubject<string>;
+	isLight :boolean;
+	isHandheld :boolean;
 
-	constructor(private breakpointObserver: BreakpointObserver) {}
+	constructor(private themesService: ThemesService, private breakpointObserver: BreakpointObserver) {}
 
-	ngOnInit(): void{
-		this.color = this.breakpointObserver.observe(
+	ngOnInit(): void {
+		if (this.themesService.currentTheme() === "light-theme") {
+			this.color = new BehaviorSubject<string>("");
+		} else {
+			this.color = new BehaviorSubject<string>("black");
+		}
+		this.themesService.getTheme().subscribe( theme => {
+			if (theme !== "light-theme") {
+				this.isLight = false;
+			} else {
+				this.isLight = true;
+			}
+			this.checkColor();
+		});
+
+		this.breakpointObserver.observe(
 			'(max-width: 1200px)'
-		).pipe(
+		).subscribe( (result :BreakpointState) => {
 			// if handheld return black to color mail icon black on the white background
-			map((result :BreakpointState )=> {
-				 if (result.matches) {
-					 return "black";
-				 } else {
-					 return "";
-				 }
-			})
-		);
+			if (result.matches){
+				this.isHandheld = true;
+			} else {
+				this.isHandheld = false;
+			}
+			this.checkColor();
+		});
 
-		this.color.subscribe( color => { console.log( color ) });
+	}
+
+	checkColor() {
+		if (this.isHandheld && this.isLight) {
+			this.color.next("black");
+		} else {
+			this.color.next("");
+		}
 	}
 
 }
