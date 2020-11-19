@@ -1,14 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'themes';
 
-app-top-toolbar { // changes theme changes to white on toolbar, needs to be here to match the component selector
-	button {
-		mat-icon {
-			color: white;
-		}
-	}
-}
-
 .spacer { // fills space for use with flexbox
 	flex: 1 1 auto;
 }
