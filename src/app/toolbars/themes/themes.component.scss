@@ -1,4 +1,4 @@
-:host-context(app-top-toolbar) { // changes theme changes to white on toolbar, needs to be here to match the component selector (which prevents it from applying on menu
+:host-context(app-top-toolbar) { // only applies style to toolbar button
 	button {
 		mat-icon {
 			color: white;
