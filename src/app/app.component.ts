@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
 	constructor(private themesService : ThemesService) {}
 
 	ngOnInit() {
+		window.scrollTo(0,1);
 		this.theme = this.themesService.getTheme();
 	}
 
