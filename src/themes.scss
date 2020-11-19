@@ -6,6 +6,13 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+// custom font
+$custom-typography: mat-typography-config(
+  $font-family: 'Belgrano, serif',
+);
+@include angular-material-typography($custom-typography);
+
+
 $brand-color: mat-palette($mat-orange, A700, 700, 800);
 //  Available color palettes: https://material.io/design/color/
 $app-primary: mat-palette($mat-grey, 900, 700);
