@@ -12,11 +12,13 @@ export class ThemesService {
 	private bs :BehaviorSubject<string>;
 
 	constructor() {
-		let theme = window.localStorage.getItem("theme");
+		// let theme = window.localStorage.getItem("theme");
+		let theme = this.getCookie();
 		if ( theme == themes[0] || theme == themes[1] ) {
 			this.theme = theme;
 		} else {
-			window.localStorage.setItem("theme", themes[0]);
+			// window.localStorage.setItem("theme", themes[0]);
+			this.setCookie(themes[0]);
 			this.theme = themes[0];
 		}
 		this.bs = new BehaviorSubject<string>(this.theme);
@@ -42,6 +44,25 @@ export class ThemesService {
 	setTheme(theme :string) {
 		this.theme = theme;
 		this.bs.next(theme);
-		window.localStorage.setItem("theme", theme);
+		// window.localStorage.setItem("theme", theme);
+		this.setCookie(theme);
+	}
+
+	setCookie(theme :string) {
+		try {
+			window.localStorage.setItem("theme", theme);
+		} catch {
+			console.error("failed to store theme");
+		}
+	}
+
+	getCookie() :string {
+		try {
+			let theme = window.localStorage.getItem("theme");
+			return theme;
+		} catch {
+			console.error("failed to store theme");
+			return "light-theme";
+		}
 	}
 }
