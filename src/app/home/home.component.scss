@@ -31,10 +31,10 @@
 }
 
 .example {
-	padding: 5vh 2vw 0 2vw;
+	padding: 5vh 0 0 0;
 	display: flex;
+	flex-flow: wrap;
 	align-items: center;
-	width: 100%;
 	justify-content: space-evenly;
 	img {
 		width: auto;
