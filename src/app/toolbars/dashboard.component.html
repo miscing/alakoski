@@ -9,6 +9,7 @@
 	</mat-sidenav>
 	<mat-sidenav-content class="max-width" [@routeAnimations]="prepareRoute(outlet)">
 		<router-outlet #outlet="outlet"></router-outlet>
+		<span class="spacer"></span>
 		<app-bottom-toolbar [isHandHeld]="(isHandHeld | async)" *ngIf="(isHandHeld | async)"></app-bottom-toolbar>
 	</mat-sidenav-content>
 </mat-sidenav-container>
