@@ -30,6 +30,7 @@
 }
 
 .example {
+	padding: 5vh 2vw 0 2vw;
 	display: flex;
 	align-items: center;
 	width: 100%;
@@ -43,6 +44,8 @@
 
 .handheld {
 	flex-direction: column;
+	justify-content: center;
+	text-align: center;
 }
 
 .even {
@@ -50,5 +53,5 @@
 }
 
 .space {
-	padding: 10vh 0;
+	padding: 5vh 0;
 }
