@@ -1,7 +1,9 @@
 :host { //sets container to column flexbox
+	position: absolute;
 	display: flex;
 	flex-flow: column;
 	height: 100vh; // position is important to override mixin height
+	width: 100vw;
 }
 
 .fit {
