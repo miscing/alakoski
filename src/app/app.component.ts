@@ -12,14 +12,6 @@ export class AppComponent implements OnInit {
 	theme :Observable<string>;
 
 	constructor(private themesService : ThemesService) {}
-
-	ngOnInit() {
-		window.addEventListener("load",function() {
-			setTimeout(function(){
-				// This hides the address bar:
-				window.scrollTo(0, 1);
-			}, 0);
-		});
 		this.theme = this.themesService.getTheme();
 	}
 
