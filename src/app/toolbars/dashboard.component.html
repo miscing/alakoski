@@ -9,7 +9,7 @@
 	</mat-sidenav>
 	<mat-sidenav-content class="max-width" [@routeAnimations]="prepareRoute(outlet)">
 		<router-outlet #outlet="outlet"></router-outlet>
-		<app-bottom-toolbar></app-bottom-toolbar>
+		<app-bottom-toolbar [isHandHeld]="(isHandHeld | async)" *ngIf="(isHandHeld | async)"></app-bottom-toolbar>
 	</mat-sidenav-content>
 </mat-sidenav-container>
-<app-bottom-toolbar *ngIf="!(isHandHeld | async)"></app-bottom-toolbar>
+<app-bottom-toolbar [isHandHeld]="(isHandHeld | async)" *ngIf="!(isHandHeld | async)"></app-bottom-toolbar>

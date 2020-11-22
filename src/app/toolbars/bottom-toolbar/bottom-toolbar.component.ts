@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, AfterViewInit, Component } from '@angular/core';
+import { Input, ChangeDetectorRef, AfterViewInit, Component } from '@angular/core';
 
 import { CdkScrollable, ScrollDispatcher } from '@angular/cdk/scrolling';
 
@@ -14,6 +14,7 @@ const triggerDiff = 60; // cut-off point to hide toolbar
 })
 
 export class BottomToolbarComponent implements AfterViewInit {
+	@Input() isHandHeld :boolean;
 	items :Item[] = itemsJson;
 	hide :boolean;
 
@@ -27,7 +28,8 @@ export class BottomToolbarComponent implements AfterViewInit {
 	}
 
 	ngAfterViewInit() {
-		this.scrollDispatcher.scrolled().subscribe( (cdk: CdkScrollable) => {
+		if (!this.isHandHeld) {
+			this.scrollDispatcher.scrolled().subscribe( (cdk: CdkScrollable) => {
 				if ( cdk ) {
 					let offset = cdk.measureScrollOffset("top");
 					if ( Math.abs(this.oldOffset - offset) < 15 ) {
@@ -45,6 +47,9 @@ export class BottomToolbarComponent implements AfterViewInit {
 					}
 					this.oldOffset = offset;
 				}
-		});
+			});
+		} else {
+			this.hide = false;
+		}
 	}
 }
