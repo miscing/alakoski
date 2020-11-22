@@ -1,8 +1,8 @@
-import { ViewChild, Component, OnInit } from '@angular/core';
+import { HostBinding, ViewChild, Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { MatDrawer } from '@angular/material/sidenav';
-import { BreakpointObserver } from '@angular/cdk/layout';
+import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -18,6 +18,7 @@ import { slideInAnimation } from './animation';
 })
 export class DashboardComponent implements OnInit {
 	@ViewChild('menudrawer') menudrawer : MatDrawer;
+	@HostBinding('style.height') hostHeight;
 
 	isHandHeld : Observable<boolean>;
 	menuOpen :boolean;
@@ -38,6 +39,18 @@ export class DashboardComponent implements OnInit {
 				this.menudrawer.close();
 			}
 		});
+
+		// will set height to height without address/url bar on mobile
+		this.breakpointObserver.observe(Breakpoints.Handset).pipe(map(res => res.matches))
+		.subscribe( (handset :boolean) => {
+			if (handset) {
+				if (window.innerHeight >= document.documentElement.clientHeight) {
+					this.hostHeight = document.documentElement.clientHeight;
+				}
+			} else {
+				this.hostHeight = "100vh";
+			}
+		});
 	}
 
 	setMenuOpened(opened :boolean) {
@@ -48,4 +61,6 @@ export class DashboardComponent implements OnInit {
 		return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
 	}
 
+	checkIfUrlBarVisible() :void {
+	}
 }
