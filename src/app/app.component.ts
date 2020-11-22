@@ -12,6 +12,8 @@ export class AppComponent implements OnInit {
 	theme :Observable<string>;
 
 	constructor(private themesService : ThemesService) {}
+
+	ngOnInit() :void{
 		this.theme = this.themesService.getTheme();
 	}
 
