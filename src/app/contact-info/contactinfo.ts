@@ -10,6 +10,7 @@ export interface CompanyInfo {
 	area :string;
 	ytunnus :string;
 	laskutus :string;
+	operaattori :string;
 }
 
 export interface Employee {
