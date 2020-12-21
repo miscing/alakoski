@@ -33,6 +33,9 @@ pages:
   only:
     - master
   except:
+    changes:
+      - .github/**/*
+      - README.md
     - schedules
 
 update:
