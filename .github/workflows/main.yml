@@ -20,7 +20,6 @@ jobs:
         run: npm install
       - name: Build app
         run: |
-          if [[ -f ./cv.yml ]]; then npm run gen; fi
           ./node_modules/@angular/cli/bin/ng build --prod --base-href="alakoski" --output-path public
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
