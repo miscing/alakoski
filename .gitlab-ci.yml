@@ -33,10 +33,11 @@ pages:
   only:
     - master
   except:
+    refs:
+      - schedules
     changes:
       - .github/**/*
       - README.md
-    - schedules
 
 update:
   cache: {}
